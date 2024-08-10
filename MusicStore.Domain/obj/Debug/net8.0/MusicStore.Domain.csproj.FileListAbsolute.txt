@@ -1,0 +1,12 @@
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\bin\Debug\net8.0\MusicStore.Domain.deps.json
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\bin\Debug\net8.0\MusicStore.Domain.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\bin\Debug\net8.0\MusicStore.Domain.pdb
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.AssemblyInfoInputs.cache
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.AssemblyInfo.cs
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\refint\MusicStore.Domain.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.pdb
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\ref\MusicStore.Domain.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Domain\obj\Debug\net8.0\MusicStore.Domain.csproj.AssemblyReference.cache

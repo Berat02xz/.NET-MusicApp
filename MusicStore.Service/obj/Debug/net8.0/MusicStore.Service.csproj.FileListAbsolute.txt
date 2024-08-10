@@ -1,0 +1,17 @@
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Service.deps.json
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Service.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Service.pdb
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.AssemblyInfoInputs.cache
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.AssemblyInfo.cs
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.csproj.CoreCompileInputs.cache
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\refint\MusicStore.Service.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.pdb
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\ref\MusicStore.Service.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicStore.Service.csproj.AssemblyReference.cache
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Domain.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Repository.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Domain.pdb
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\bin\Debug\net8.0\MusicStore.Repository.pdb
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore.Service\obj\Debug\net8.0\MusicSto.2A92F78D.Up2Date
