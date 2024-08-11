@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MusicStore.Domain.Models.Album>
+
+<h2>Albums</h2>
+
+<!-- Display Model Errors -->
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+
+<p>
+    <a asp-action="Create">Add Album</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Cover Image</th>
+            <th>Description</th>
+            <th>Release Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var album in Model)
+        {
+            <tr>
+                <td>@album.Title</td>
+                <td><img src="@album.CoverImageUrl" alt="Cover Image" width="100" /></td>
+                <td>@album.Description</td>
+                <td>@album.ReleaseDate.ToShortDateString()</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = album.Id })">Edit</a> |
+                    <a href="@Url.Action("Details", new { id = album.Id })">Details</a> |
+                    <a href="@Url.Action("Delete", new { id = album.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

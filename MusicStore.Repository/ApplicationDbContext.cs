@@ -12,15 +12,11 @@ namespace MusicStore.Repository
         {
         }
 
-        public DbSet<Playlist> Playlists { get; set; }
-        public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
         public DbSet<Track> Tracks { get; set; }
-        
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
-        public DbSet<TrackArtist> TrackArtists { get; set; }
-        public DbSet<AlbumArtist> AlbumArtists { get; set; }
-        public DbSet<AlbumTrack> AlbumTracks { get; set; }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -34,64 +30,55 @@ namespace MusicStore.Repository
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure PlaylistTrack many-to-many relationship
-            modelBuilder.Entity<PlaylistTrack>()
-                .HasKey(pt => new { pt.PlaylistId, pt.TrackId });
+            // Many-to-many relationship between Track and Artist
+            modelBuilder.Entity<Track>()
+                .HasMany(t => t.Artists)
+                .WithMany(a => a.Tracks)
+                .UsingEntity<Dictionary<string, object>>(
+                    "TrackArtist", // Junction table name
+                    j => j
+                        .HasOne<Artist>()
+                        .WithMany()
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade),
+                    j => j
+                        .HasOne<Track>()
+                        .WithMany()
+                        .HasForeignKey("TrackId")
+                        .OnDelete(DeleteBehavior.Cascade),
+                    j =>
+                    {
+                        j.HasKey("TrackId", "ArtistId");
+                    });
 
-            modelBuilder.Entity<PlaylistTrack>()
-                .HasOne(pt => pt.Playlist)
-                .WithMany(p => p.PlaylistTracks)
-                .HasForeignKey(pt => pt.PlaylistId);
+            // Configure the one-to-many relationship between Track and Album
+            modelBuilder.Entity<Track>()
+                .HasOne(t => t.Album)
+                .WithMany(a => a.Tracks)
+                .HasForeignKey(t => t.AlbumId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<PlaylistTrack>()
-                .HasOne(pt => pt.Track)
-                .WithMany(t => t.PlaylistTracks)
-                .HasForeignKey(pt => pt.TrackId);
-
-            // Configure TrackArtist many-to-many relationship
-            modelBuilder.Entity<TrackArtist>()
-                .HasKey(ta => new { ta.TrackId, ta.ArtistId });
-
-            modelBuilder.Entity<TrackArtist>()
-                .HasOne(ta => ta.Track)
-                .WithMany(t => t.TrackArtists)
-                .HasForeignKey(ta => ta.TrackId);
-
-            modelBuilder.Entity<TrackArtist>()
-                .HasOne(ta => ta.Artist)
-                .WithMany(a => a.TrackArtists)
-                .HasForeignKey(ta => ta.ArtistId);
-
-            // Configure AlbumArtist many-to-many relationship
-            modelBuilder.Entity<AlbumArtist>()
-                .HasKey(aa => new { aa.AlbumId, aa.ArtistId });
-
-            modelBuilder.Entity<AlbumArtist>()
-                .HasOne(aa => aa.Album)
-                .WithMany(a => a.AlbumArtists) // Updated to match navigation property name in Album class
-                .HasForeignKey(aa => aa.AlbumId);
-
-            modelBuilder.Entity<AlbumArtist>()
-                .HasOne(aa => aa.Artist)
-                .WithMany(a => a.AlbumArtists)
-                .HasForeignKey(aa => aa.ArtistId);
-
-            // Configure AlbumTrack many-to-many relationship
-            modelBuilder.Entity<AlbumTrack>()
-                .HasKey(at => new { at.AlbumId, at.TrackId });
-
-            modelBuilder.Entity<AlbumTrack>()
-                .HasOne(at => at.Album)
-                .WithMany(a => a.AlbumTracks) // Updated to match navigation property name in Album class
-                .HasForeignKey(at => at.AlbumId);
-
-            modelBuilder.Entity<AlbumTrack>()
-                .HasOne(at => at.Track)
-                .WithMany(t => t.AlbumTracks)
-                .HasForeignKey(at => at.TrackId);
+            // Many-to-many relationship between Album and Artist
+            modelBuilder.Entity<Album>()
+                .HasMany(a => a.Artists)
+                .WithMany(a => a.Albums)
+                .UsingEntity<Dictionary<string, object>>(
+                    "AlbumArtist", // Junction table name
+                    j => j
+                        .HasOne<Artist>()
+                        .WithMany()
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade),
+                    j => j
+                        .HasOne<Album>()
+                        .WithMany()
+                        .HasForeignKey("AlbumId")
+                        .OnDelete(DeleteBehavior.Cascade),
+                    j =>
+                    {
+                        j.HasKey("AlbumId", "ArtistId");
+                    });
         }
-
-
 
 
     }

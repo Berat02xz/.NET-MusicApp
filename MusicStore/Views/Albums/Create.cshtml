@@ -1,0 +1,204 @@
+﻿@model MusicStore.Domain.Models.Album
+@using System.Text.Json
+
+@{
+    ViewBag.Title = "Create Album";
+    var artistsJson = ViewBag.Artists as string;
+}
+
+<h2>Create Album</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CoverImageUrl"></label>
+        <input asp-for="CoverImageUrl" class="form-control" />
+        <span asp-validation-for="CoverImageUrl" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ReleaseDate"></label>
+        <input asp-for="ReleaseDate" class="form-control" type="date" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Tags">Tags (comma-separated)</label>
+        <input asp-for="Tags" class="form-control" />
+        <span asp-validation-for="Tags" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Album Type</label>
+        <div>
+            <label class="radio-inline">
+                <input asp-for="Type" type="radio" value="EP" /> EP
+            </label>
+            <label class="radio-inline">
+                <input asp-for="Type" type="radio" value="LP" /> LP
+            </label>
+        </div>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Select Artists</label>
+        <input type="text" id="artist-search" class="form-control" placeholder="Search for artists..." />
+        <div id="artist-list" class="list-group"></div>
+        <ul id="selected-artists" class="list-group mt-2">
+            <!-- Selected artists will be shown here -->
+        </ul>
+        <input type="hidden" name="SelectedArtistIds" />
+    </div>
+
+    <div class="form-group">
+        <label>Number of Tracks</label>
+        <input type="number" id="numberOfTracksInput" class="form-control" min="1" />
+    </div>
+
+    <div id="trackFormsContainer">
+        <!-- Track forms will be dynamically added here -->
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Album</button>
+</form>
+
+
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Ensure the JSON string is parsed properly
+            var artistsJson = @Html.Raw(Json.Serialize(ViewBag.Artists));
+            var artists = JSON.parse(artistsJson);
+
+            // Search for artists
+            $('#artist-search').on('input', function () {
+                var query = $(this).val().toLowerCase();
+                var filteredArtists = artists.filter(function (artist) {
+                    return artist.Name.toLowerCase().includes(query);
+                });
+
+                $('#artist-list').empty();
+                filteredArtists.forEach(function (artist) {
+                    $('#artist-list').append('<a href="#" class="list-group-item list-group-item-action" data-id="' + artist.Id + '">' + artist.Name + '</a>');
+                });
+            });
+
+            // Add artist to selected list
+            $('#artist-list').on('click', 'a', function (e) {
+                e.preventDefault();
+                var artistId = $(this).data('id');
+                var artistName = $(this).text();
+
+                if (!$('#selected-artists li[data-id="' + artistId + '"]').length) {
+                    $('#selected-artists').append('<li class="list-group-item" data-id="' + artistId + '">' + artistName + ' <button type="button" class="btn btn-sm btn-danger remove-artist">Remove</button></li>');
+                    updateSelectedArtistIds();
+                }
+            });
+
+            // Remove artist from selected list
+            $('#selected-artists').on('click', '.remove-artist', function () {
+                $(this).parent().remove();
+                updateSelectedArtistIds();
+            });
+
+            // Update hidden input with selected artist IDs
+            function updateSelectedArtistIds() {
+                var selectedArtists = $('#selected-artists').find('li').map(function () {
+                    return $(this).data('id');
+                }).get();
+                $('input[name="SelectedArtistIds"]').val(selectedArtists.join(','));
+            }
+
+            // Generate track forms based on number of tracks
+            $('#numberOfTracksInput').on('input', function () {
+                var numberOfTracks = $(this).val();
+                $('#trackFormsContainer').empty();
+
+                for (var i = 0; i < numberOfTracks; i++) {
+                    $('#trackFormsContainer').append(`
+                                <div class="track-form">
+                                    <h4>Track ${i + 1}</h4>
+                                    <div class="form-group">
+                                        <label for="Tracks_${i}__Title">Title</label>
+                                        <input type="text" name="Tracks[${i}].Title" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Tracks_${i}__Duration">Duration</label>
+                                        <input type="text" name="Tracks[${i}].Duration" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Tracks_${i}__YoutubeURL">YouTube URL</label>
+                                        <input type="text" name="Tracks[${i}].YoutubeURL" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Select Artists</label>
+                                        <input type="text" class="form-control track-artist-search" placeholder="Search for artists..." data-track="${i}" />
+                                        <div class="list-group track-artist-list" id="track-artist-list-${i}"></div>
+                                        <ul class="list-group selected-track-artists" id="selected-track-artists-${i}">
+                                            <!-- Selected track artists will be shown here -->
+                                        </ul>
+                                        <input type="hidden" name="Tracks[${i}].SelectedArtistIds" />
+                                    </div>
+                                </div>
+                            `);
+                }
+            });
+
+            // Handle track artist search
+            $(document).on('input', '.track-artist-search', function () {
+                var trackIndex = $(this).data('track');
+                var query = $(this).val().toLowerCase();
+                var filteredArtists = artists.filter(function (artist) {
+                    return artist.Name.toLowerCase().includes(query);
+                });
+
+                $('#track-artist-list-' + trackIndex).empty();
+                filteredArtists.forEach(function (artist) {
+                    $('#track-artist-list-' + trackIndex).append('<a href="#" class="list-group-item list-group-item-action" data-id="' + artist.Id + '">' + artist.Name + '</a>');
+                });
+            });
+
+            // Add artist to track's selected list
+            $(document).on('click', '.track-artist-list a', function (e) {
+                e.preventDefault();
+                var trackIndex = $(this).closest('.track-artist-list').attr('id').split('-').pop();
+                var artistId = $(this).data('id');
+                var artistName = $(this).text();
+
+                if (!$('#selected-track-artists-' + trackIndex + ' li[data-id="' + artistId + '"]').length) {
+                    $('#selected-track-artists-' + trackIndex).append('<li class="list-group-item" data-id="' + artistId + '">' + artistName + ' <button type="button" class="btn btn-sm btn-danger remove-track-artist">Remove</button></li>');
+                    updateSelectedTrackArtistIds(trackIndex);
+                }
+            });
+
+            // Remove artist from track's selected list
+            $(document).on('click', '.remove-track-artist', function () {
+                var trackIndex = $(this).closest('ul').attr('id').split('-').pop();
+                $(this).parent().remove();
+                updateSelectedTrackArtistIds(trackIndex);
+            });
+
+            // Update hidden input with selected track artist IDs
+            function updateSelectedTrackArtistIds(trackIndex) {
+                var selectedTrackArtists = $('#selected-track-artists-' + trackIndex).find('li').map(function () {
+                    return $(this).data('id');
+                }).get();
+                $('input[name="Tracks[' + trackIndex + '].SelectedArtistIds"]').val(selectedTrackArtists.join(','));
+            }
+        });
+    </script>
+}

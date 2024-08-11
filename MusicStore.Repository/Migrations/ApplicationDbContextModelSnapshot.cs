@@ -22,6 +22,21 @@ namespace MusicStore.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("AlbumArtist", b =>
+                {
+                    b.Property<Guid>("AlbumId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ArtistId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("AlbumId", "ArtistId");
+
+                    b.HasIndex("ArtistId");
+
+                    b.ToTable("AlbumArtist");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -102,12 +117,10 @@ namespace MusicStore.Repository.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -144,12 +157,10 @@ namespace MusicStore.Repository.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -250,6 +261,9 @@ namespace MusicStore.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Tags")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -272,6 +286,14 @@ namespace MusicStore.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -284,59 +306,13 @@ namespace MusicStore.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Tags")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Artists");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.Playlist", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageURL")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Playlists");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.PlaylistTrack", b =>
-                {
-                    b.Property<Guid>("PlaylistId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("TrackId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Order")
-                        .HasColumnType("int");
-
-                    b.HasKey("PlaylistId", "TrackId");
-
-                    b.HasIndex("TrackId");
-
-                    b.ToTable("PlaylistTracks");
                 });
 
             modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
@@ -348,14 +324,21 @@ namespace MusicStore.Repository.Migrations
                     b.Property<Guid>("AlbumId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<TimeSpan>("Duration")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Duration")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ListenCount")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YoutubeURL")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -365,7 +348,7 @@ namespace MusicStore.Repository.Migrations
                     b.ToTable("Tracks");
                 });
 
-            modelBuilder.Entity("MusicStore.Domain.Models.TrackArtist", b =>
+            modelBuilder.Entity("TrackArtist", b =>
                 {
                     b.Property<Guid>("TrackId")
                         .HasColumnType("uniqueidentifier");
@@ -373,17 +356,26 @@ namespace MusicStore.Repository.Migrations
                     b.Property<Guid>("ArtistId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Order")
-                        .HasColumnType("int");
-
                     b.HasKey("TrackId", "ArtistId");
 
                     b.HasIndex("ArtistId");
 
-                    b.ToTable("TrackArtists");
+                    b.ToTable("TrackArtist");
+                });
+
+            modelBuilder.Entity("AlbumArtist", b =>
+                {
+                    b.HasOne("MusicStore.Domain.Models.Album", null)
+                        .WithMany()
+                        .HasForeignKey("AlbumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MusicStore.Domain.Models.Artist", null)
+                        .WithMany()
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -437,36 +429,6 @@ namespace MusicStore.Repository.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MusicStore.Domain.Models.Playlist", b =>
-                {
-                    b.HasOne("MusicStore.Domain.Identity.MusicStoreUser", "User")
-                        .WithMany("Playlists")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.PlaylistTrack", b =>
-                {
-                    b.HasOne("MusicStore.Domain.Models.Playlist", "Playlist")
-                        .WithMany("PlaylistTracks")
-                        .HasForeignKey("PlaylistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MusicStore.Domain.Models.Track", "Track")
-                        .WithMany("PlaylistTracks")
-                        .HasForeignKey("TrackId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Playlist");
-
-                    b.Navigation("Track");
-                });
-
             modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
                 {
                     b.HasOne("MusicStore.Domain.Models.Album", "Album")
@@ -478,50 +440,24 @@ namespace MusicStore.Repository.Migrations
                     b.Navigation("Album");
                 });
 
-            modelBuilder.Entity("MusicStore.Domain.Models.TrackArtist", b =>
+            modelBuilder.Entity("TrackArtist", b =>
                 {
-                    b.HasOne("MusicStore.Domain.Models.Artist", "Artist")
-                        .WithMany("TrackArtists")
+                    b.HasOne("MusicStore.Domain.Models.Artist", null)
+                        .WithMany()
                         .HasForeignKey("ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MusicStore.Domain.Models.Track", "Track")
-                        .WithMany("TrackArtists")
+                    b.HasOne("MusicStore.Domain.Models.Track", null)
+                        .WithMany()
                         .HasForeignKey("TrackId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Artist");
-
-                    b.Navigation("Track");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Identity.MusicStoreUser", b =>
-                {
-                    b.Navigation("Playlists");
                 });
 
             modelBuilder.Entity("MusicStore.Domain.Models.Album", b =>
                 {
                     b.Navigation("Tracks");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.Artist", b =>
-                {
-                    b.Navigation("TrackArtists");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.Playlist", b =>
-                {
-                    b.Navigation("PlaylistTracks");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
-                {
-                    b.Navigation("PlaylistTracks");
-
-                    b.Navigation("TrackArtists");
                 });
 #pragma warning restore 612, 618
         }

@@ -53,37 +53,5 @@ namespace MusicStore.Service.Implementation
 
         // Methods for managing playlists
 
-        public IEnumerable<Playlist> GetUserPlaylists(string userId)
-        {
-            return _userRepository.GetUserPlaylists(userId);
-        }
-
-        public Playlist GetPlaylistById(Guid playlistId)
-        {
-            return _userRepository.GetPlaylistById(playlistId);
-        }
-
-        public void AddPlaylist(Playlist playlist)
-        {
-            if (playlist == null)
-            {
-                throw new ArgumentNullException(nameof(playlist));
-            }
-            _userRepository.AddPlaylist(playlist);
-        }
-
-        public void UpdatePlaylist(Playlist playlist)
-        {
-            if (playlist == null)
-            {
-                throw new ArgumentNullException(nameof(playlist));
-            }
-            _userRepository.UpdatePlaylist(playlist);
-        }
-
-        public void DeletePlaylist(Guid playlistId)
-        {
-            _userRepository.DeletePlaylist(playlistId);
-        }
     }
 }

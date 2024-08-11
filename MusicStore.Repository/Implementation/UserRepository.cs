@@ -9,13 +9,11 @@ namespace MusicStore.Repository.Implementation
     {
         private readonly ApplicationDbContext _context;
         private DbSet<MusicStoreUser> _entities;
-        private DbSet<Playlist> _playlists;
 
         public UserRepository(ApplicationDbContext context)
         {
             _context = context;
             _entities = context.Set<MusicStoreUser>();
-            _playlists = context.Set<Playlist>();
         }
 
         public IEnumerable<MusicStoreUser> GetAll()
@@ -30,10 +28,9 @@ namespace MusicStore.Repository.Implementation
                 throw new ArgumentException("ID cannot be null or empty", nameof(id));
             }
 
-            return _entities
-                .Include(u => u.Playlists)
-                .FirstOrDefault(u => u.Id == id);
+            return _entities.FirstOrDefault(u => u.Id == id);
         }
+
 
         public void Insert(MusicStoreUser entity)
         {
@@ -65,49 +62,7 @@ namespace MusicStore.Repository.Implementation
             _context.SaveChanges();
         }
 
-        // New methods to manage playlists
+        // New methods to manage playlists will need to be added here
 
-        public IEnumerable<Playlist> GetUserPlaylists(string userId)
-        {
-            return _playlists
-                .Where(p => p.UserId == userId)
-                .ToList();
-        }
-
-        public Playlist GetPlaylistById(Guid playlistId)
-        {
-            return _playlists
-                .FirstOrDefault(p => p.Id == playlistId);
-        }
-
-        public void AddPlaylist(Playlist playlist)
-        {
-            if (playlist == null)
-            {
-                throw new ArgumentNullException(nameof(playlist));
-            }
-            _playlists.Add(playlist);
-            _context.SaveChanges();
-        }
-
-        public void UpdatePlaylist(Playlist playlist)
-        {
-            if (playlist == null)
-            {
-                throw new ArgumentNullException(nameof(playlist));
-            }
-            _playlists.Update(playlist);
-            _context.SaveChanges();
-        }
-
-        public void DeletePlaylist(Guid playlistId)
-        {
-            var playlist = _playlists.Find(playlistId);
-            if (playlist != null)
-            {
-                _playlists.Remove(playlist);
-                _context.SaveChanges();
-            }
-        }
     }
 }

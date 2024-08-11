@@ -13,10 +13,5 @@ namespace MusicStore.Repository.Interface
 
 
         // New methods to manage playlists
-        IEnumerable<Playlist> GetUserPlaylists(string userId);
-        Playlist GetPlaylistById(Guid playlistId);
-        void AddPlaylist(Playlist playlist);
-        void UpdatePlaylist(Playlist playlist);
-        void DeletePlaylist(Guid playlistId);
     }
 }

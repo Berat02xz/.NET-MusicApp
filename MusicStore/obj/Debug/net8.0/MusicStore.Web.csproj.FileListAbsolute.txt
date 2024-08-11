@@ -3,10 +3,8 @@ C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\D
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.AssemblyInfoInputs.cache
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.AssemblyInfo.cs
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.csproj.CoreCompileInputs.cache
-C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.RazorAssemblyInfo.cache
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.RazorAssemblyInfo.cs
-C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\bin\Debug\net8.0\appsettings.json
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\bin\Debug\net8.0\MusicStore.Web.staticwebassets.runtime.json
@@ -289,3 +287,5 @@ C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\D
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.pdb
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.genruntimeconfig.cache
 C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\ref\MusicStore.Web.dll
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\berat\OneDrive\Documents\Github\NewMusicApp\MusicStore\MusicStore\obj\Debug\net8.0\MusicStore.Web.MvcApplicationPartsAssemblyInfo.cache

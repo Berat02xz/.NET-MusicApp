@@ -5,13 +5,15 @@
         public required string Title { get; set; }
         public required string CoverImageUrl { get; set; }
         public required string Description { get; set; }
-        public required string Tags { get; set; } // For tagging, can be a comma-separated string or JSON
+        public DateTime ReleaseDate { get; set; }
+        public required string Tags { get; set; } // For tagging genres, will be comma seperated in frontend using JS
         public required AlbumType Type { get; set; } // Enum for album type
 
-        // Navigation properties
-        public List<TrackArtist>? TrackArtists { get; set; } = new List<TrackArtist>();
-        public List<AlbumArtist>? AlbumArtists { get; set; } = new List<AlbumArtist>();
-        public List<AlbumTrack>? AlbumTracks { get; set; } = new List<AlbumTrack>(); // Added this line
+
+        public List<Track> Tracks { get; set; } = new List<Track>();
+            // List of tracks in the album
+        public List<Artist> Artists { get; set; } = new List<Artist>();
+        // List of artists in the album
 
     }
 
