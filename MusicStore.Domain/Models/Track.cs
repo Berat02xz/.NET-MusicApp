@@ -10,8 +10,5 @@
 
         public List<Artist> Artists { get; set; } = new List<Artist>();
         // List of artists on the track
-
-        public Album? Album { get; set; }
-        public Guid AlbumId { get; set; }
     }
 }

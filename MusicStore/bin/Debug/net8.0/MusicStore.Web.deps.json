@@ -17,7 +17,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.3",
           "MusicStore.Domain": "1.0.0",
-          "MusicStore.Repository": "1.0.0"
+          "MusicStore.Repository": "1.0.0",
+          "MusicStore.Service": "1.0.0"
         },
         "runtime": {
           "MusicStore.Web.dll": {}
@@ -2165,6 +2166,19 @@
         "runtime": {
           "MusicStore.Repository.dll": {}
         }
+      },
+      "MusicStore.Service/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.7",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "MusicStore.Domain": "1.0.0",
+          "MusicStore.Repository": "1.0.0"
+        },
+        "runtime": {
+          "MusicStore.Service.dll": {}
+        }
       }
     }
   },
@@ -3405,6 +3419,11 @@
       "sha512": ""
     },
     "MusicStore.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MusicStore.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

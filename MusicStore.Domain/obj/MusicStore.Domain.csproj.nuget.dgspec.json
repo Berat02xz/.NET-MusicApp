@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\MusicStore.Domain.csproj": {}
+    "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+    "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\MusicStore.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj",
         "projectName": "MusicStore.Domain",
-        "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\MusicStore.Domain.csproj",
+        "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj",
         "packagesPath": "C:\\Users\\berat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\obj\\",
+        "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\berat\\AppData\\Roaming\\NuGet\\NuGet.Config",

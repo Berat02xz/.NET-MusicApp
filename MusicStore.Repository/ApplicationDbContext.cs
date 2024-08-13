@@ -15,7 +15,7 @@ namespace MusicStore.Repository
         public DbSet<Track> Tracks { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
-
+        public DbSet<TrackArtist> TrackArtists { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -26,59 +26,10 @@ namespace MusicStore.Repository
         }
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
 
-            // Many-to-many relationship between Track and Artist
-            modelBuilder.Entity<Track>()
-                .HasMany(t => t.Artists)
-                .WithMany(a => a.Tracks)
-                .UsingEntity<Dictionary<string, object>>(
-                    "TrackArtist", // Junction table name
-                    j => j
-                        .HasOne<Artist>()
-                        .WithMany()
-                        .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade),
-                    j => j
-                        .HasOne<Track>()
-                        .WithMany()
-                        .HasForeignKey("TrackId")
-                        .OnDelete(DeleteBehavior.Cascade),
-                    j =>
-                    {
-                        j.HasKey("TrackId", "ArtistId");
-                    });
 
-            // Configure the one-to-many relationship between Track and Album
-            modelBuilder.Entity<Track>()
-                .HasOne(t => t.Album)
-                .WithMany(a => a.Tracks)
-                .HasForeignKey(t => t.AlbumId)
-                .OnDelete(DeleteBehavior.Cascade);
 
-            // Many-to-many relationship between Album and Artist
-            modelBuilder.Entity<Album>()
-                .HasMany(a => a.Artists)
-                .WithMany(a => a.Albums)
-                .UsingEntity<Dictionary<string, object>>(
-                    "AlbumArtist", // Junction table name
-                    j => j
-                        .HasOne<Artist>()
-                        .WithMany()
-                        .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade),
-                    j => j
-                        .HasOne<Album>()
-                        .WithMany()
-                        .HasForeignKey("AlbumId")
-                        .OnDelete(DeleteBehavior.Cascade),
-                    j =>
-                    {
-                        j.HasKey("AlbumId", "ArtistId");
-                    });
-        }
+
 
 
     }

@@ -24,17 +24,32 @@ namespace MusicStore.Repository.Migrations
 
             modelBuilder.Entity("AlbumArtist", b =>
                 {
-                    b.Property<Guid>("AlbumId")
+                    b.Property<Guid>("AlbumsId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ArtistId")
+                    b.Property<Guid>("ArtistsId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("AlbumId", "ArtistId");
+                    b.HasKey("AlbumsId", "ArtistsId");
 
-                    b.HasIndex("ArtistId");
+                    b.HasIndex("ArtistsId");
 
                     b.ToTable("AlbumArtist");
+                });
+
+            modelBuilder.Entity("ArtistTrack", b =>
+                {
+                    b.Property<Guid>("ArtistsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TracksId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ArtistsId", "TracksId");
+
+                    b.HasIndex("TracksId");
+
+                    b.ToTable("ArtistTrack");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -321,7 +336,7 @@ namespace MusicStore.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AlbumId")
+                    b.Property<Guid?>("AlbumId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DateAdded")
@@ -348,32 +363,53 @@ namespace MusicStore.Repository.Migrations
                     b.ToTable("Tracks");
                 });
 
-            modelBuilder.Entity("TrackArtist", b =>
+            modelBuilder.Entity("MusicStore.Domain.Models.TrackArtist", b =>
                 {
-                    b.Property<Guid>("TrackId")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("ArtistId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("TrackId", "ArtistId");
+                    b.Property<Guid>("TrackId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("ArtistId");
 
-                    b.ToTable("TrackArtist");
+                    b.HasIndex("TrackId");
+
+                    b.ToTable("TrackArtists");
                 });
 
             modelBuilder.Entity("AlbumArtist", b =>
                 {
                     b.HasOne("MusicStore.Domain.Models.Album", null)
                         .WithMany()
-                        .HasForeignKey("AlbumId")
+                        .HasForeignKey("AlbumsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("MusicStore.Domain.Models.Artist", null)
                         .WithMany()
-                        .HasForeignKey("ArtistId")
+                        .HasForeignKey("ArtistsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ArtistTrack", b =>
+                {
+                    b.HasOne("MusicStore.Domain.Models.Artist", null)
+                        .WithMany()
+                        .HasForeignKey("ArtistsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MusicStore.Domain.Models.Track", null)
+                        .WithMany()
+                        .HasForeignKey("TracksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -431,28 +467,28 @@ namespace MusicStore.Repository.Migrations
 
             modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
                 {
-                    b.HasOne("MusicStore.Domain.Models.Album", "Album")
+                    b.HasOne("MusicStore.Domain.Models.Album", null)
                         .WithMany("Tracks")
-                        .HasForeignKey("AlbumId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Album");
+                        .HasForeignKey("AlbumId");
                 });
 
-            modelBuilder.Entity("TrackArtist", b =>
+            modelBuilder.Entity("MusicStore.Domain.Models.TrackArtist", b =>
                 {
-                    b.HasOne("MusicStore.Domain.Models.Artist", null)
+                    b.HasOne("MusicStore.Domain.Models.Artist", "Artist")
                         .WithMany()
                         .HasForeignKey("ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MusicStore.Domain.Models.Track", null)
+                    b.HasOne("MusicStore.Domain.Models.Track", "Track")
                         .WithMany()
                         .HasForeignKey("TrackId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("Track");
                 });
 
             modelBuilder.Entity("MusicStore.Domain.Models.Album", b =>

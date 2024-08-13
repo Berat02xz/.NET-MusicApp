@@ -14,5 +14,6 @@
         // List of tracks by the artist
         public List<Album>? Albums { get; set; } = new List<Album>();
         // List of albums by the artist
+
     }
 }

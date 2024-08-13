@@ -3124,6 +3124,24 @@
         "runtime": {
           "bin/placeholder/MusicStore.Repository.dll": {}
         }
+      },
+      "MusicStore.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.7",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore": "8.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "MusicStore.Domain": "1.0.0",
+          "MusicStore.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MusicStore.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MusicStore.Service.dll": {}
+        }
       }
     }
   },
@@ -8638,6 +8656,11 @@
       "type": "project",
       "path": "../MusicStore.Repository/MusicStore.Repository.csproj",
       "msbuildProject": "../MusicStore.Repository/MusicStore.Repository.csproj"
+    },
+    "MusicStore.Service/1.0.0": {
+      "type": "project",
+      "path": "../MusicStore.Service/MusicStore.Service.csproj",
+      "msbuildProject": "../MusicStore.Service/MusicStore.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8651,7 +8674,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.7",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.3",
       "MusicStore.Domain >= 1.0.0",
-      "MusicStore.Repository >= 1.0.0"
+      "MusicStore.Repository >= 1.0.0",
+      "MusicStore.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8660,11 +8684,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore\\MusicStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
       "projectName": "MusicStore.Web",
-      "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore\\MusicStore.Web.csproj",
+      "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
       "packagesPath": "C:\\Users\\berat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore\\obj\\",
+      "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\berat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8682,11 +8706,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\MusicStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Domain\\MusicStore.Domain.csproj"
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj"
             },
-            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Repository\\MusicStore.Repository.csproj": {
-              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\NewMusicApp\\MusicStore\\MusicStore.Repository\\MusicStore.Repository.csproj"
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj"
+            },
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\MusicStore.Service.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\MusicStore.Service.csproj"
             }
           }
         }
