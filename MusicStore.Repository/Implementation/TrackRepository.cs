@@ -18,12 +18,17 @@ namespace MusicStore.Repository.Implementation
             _context = context;
         }
 
-        public List<Track> GetAllTracks() => _context.Tracks.ToList();
+        public List<Track> GetAllTracks()
+        {
+            return _context.Tracks.ToList();
+        }
 
-
-        public Track GetTrackById(Guid id) => _context.Tracks
-            .Include(t => t.Artists)
-            .FirstOrDefault(t => t.Id == id);
+        public Track GetTrackById(Guid id)
+        {
+            return _context.Tracks
+                .Include(t => t.Artists)
+                .FirstOrDefault(t => t.Id == id);
+        }
 
         public void AddTrack(Track track)
         {

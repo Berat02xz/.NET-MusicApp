@@ -14,6 +14,8 @@ namespace MusicStore.Repository.Interface
         void AddAlbum(Album album);
         void UpdateAlbum(Album album);
         void DeleteAlbum(Guid id);
+
+        void SaveChanges();
     }
 
 }

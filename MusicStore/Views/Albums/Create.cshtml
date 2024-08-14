@@ -5,9 +5,13 @@
     ViewBag.Title = "Create Album";
     var artistsJson = ViewBag.Artists as string;
 }
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
 <h2>Create Album</h2>
-
+<script>
+    var artists = @Html.Raw(artistsJson);
+    console.log(artists); // This should log the list of artists in JSON format
+</script>
 <form asp-action="Create" method="post">
     <div class="form-group">
         <label asp-for="Title"></label>
@@ -64,7 +68,7 @@
 
     <div class="form-group">
         <label>Number of Tracks</label>
-        <input type="number" id="numberOfTracksInput" class="form-control" min="1" />
+        <input type="number" id="numberOfTracksInput" name="numberOfTracksInput" class="form-control" min="1" />
     </div>
 
     <div id="trackFormsContainer">
@@ -93,7 +97,7 @@
 
                 $('#artist-list').empty();
                 filteredArtists.forEach(function (artist) {
-                    $('#artist-list').append('<a href="#" class="list-group-item list-group-item-action" data-id="' + artist.Id + '">' + artist.Name + '</a>');
+                    $('#artist-list').append(`<a href="#" class="list-group-item list-group-item-action" data-id="${artist.Id}">${artist.Name}</a>`);
                 });
             });
 
@@ -104,7 +108,7 @@
                 var artistName = $(this).text();
 
                 if (!$('#selected-artists li[data-id="' + artistId + '"]').length) {
-                    $('#selected-artists').append('<li class="list-group-item" data-id="' + artistId + '">' + artistName + ' <button type="button" class="btn btn-sm btn-danger remove-artist">Remove</button></li>');
+                    $('#selected-artists').append(`<li class="list-group-item" data-id="${artistId}">${artistName} <button type="button" class="btn btn-sm btn-danger remove-artist">Remove</button></li>`);
                     updateSelectedArtistIds();
                 }
             });
@@ -123,40 +127,41 @@
                 $('input[name="SelectedArtistIds"]').val(selectedArtists.join(','));
             }
 
-            // Generate track forms based on number of tracks
             $('#numberOfTracksInput').on('input', function () {
                 var numberOfTracks = $(this).val();
                 $('#trackFormsContainer').empty();
 
                 for (var i = 0; i < numberOfTracks; i++) {
                     $('#trackFormsContainer').append(`
-                                <div class="track-form">
-                                    <h4>Track ${i + 1}</h4>
-                                    <div class="form-group">
-                                        <label for="Tracks_${i}__Title">Title</label>
-                                        <input type="text" name="Tracks[${i}].Title" class="form-control" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Tracks_${i}__Duration">Duration</label>
-                                        <input type="text" name="Tracks[${i}].Duration" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Tracks_${i}__YoutubeURL">YouTube URL</label>
-                                        <input type="text" name="Tracks[${i}].YoutubeURL" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Select Artists</label>
-                                        <input type="text" class="form-control track-artist-search" placeholder="Search for artists..." data-track="${i}" />
-                                        <div class="list-group track-artist-list" id="track-artist-list-${i}"></div>
-                                        <ul class="list-group selected-track-artists" id="selected-track-artists-${i}">
-                                            <!-- Selected track artists will be shown here -->
-                                        </ul>
-                                        <input type="hidden" name="Tracks[${i}].SelectedArtistIds" />
-                                    </div>
-                                </div>
-                            `);
+                    <div class="track-form">
+                        <h4>Track ${i + 1}</h4>
+                        <div class="form-group">
+                            <label for="Tracks_${i}__Title">Title</label>
+                            <input type="text" name="trackTitles[${i}]" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="Tracks_${i}__Duration">Duration</label>
+                            <input type="text" name="trackDurations[${i}]" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Tracks_${i}__YoutubeURL">YouTube URL</label>
+                            <input type="text" name="trackYoutubeURLs[${i}]" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Select Artists</label>
+                            <input type="text" class="form-control track-artist-search" placeholder="Search for artists..." data-track="${i}" />
+                            <div class="list-group track-artist-list" id="track-artist-list-${i}"></div>
+                            <ul class="list-group selected-track-artists" id="selected-track-artists-${i}">
+                                <!-- Selected track artists will be shown here -->
+                            </ul>
+                            <input type="hidden" name="trackSelectedArtistIds[${i}]" />
+                        </div>
+                    </div>
+                `);
                 }
             });
+
+
 
             // Handle track artist search
             $(document).on('input', '.track-artist-search', function () {
@@ -168,7 +173,7 @@
 
                 $('#track-artist-list-' + trackIndex).empty();
                 filteredArtists.forEach(function (artist) {
-                    $('#track-artist-list-' + trackIndex).append('<a href="#" class="list-group-item list-group-item-action" data-id="' + artist.Id + '">' + artist.Name + '</a>');
+                    $('#track-artist-list-' + trackIndex).append(`<a href="#" class="list-group-item list-group-item-action" data-id="${artist.Id}">${artist.Name}</a>`);
                 });
             });
 
@@ -180,7 +185,7 @@
                 var artistName = $(this).text();
 
                 if (!$('#selected-track-artists-' + trackIndex + ' li[data-id="' + artistId + '"]').length) {
-                    $('#selected-track-artists-' + trackIndex).append('<li class="list-group-item" data-id="' + artistId + '">' + artistName + ' <button type="button" class="btn btn-sm btn-danger remove-track-artist">Remove</button></li>');
+                    $('#selected-track-artists-' + trackIndex).append(`<li class="list-group-item" data-id="${artistId}">${artistName} <button type="button" class="btn btn-sm btn-danger remove-track-artist">Remove</button></li>`);
                     updateSelectedTrackArtistIds(trackIndex);
                 }
             });
@@ -199,6 +204,11 @@
                 }).get();
                 $('input[name="Tracks[' + trackIndex + '].SelectedArtistIds"]').val(selectedTrackArtists.join(','));
             }
+
+
+
+
         });
+
     </script>
 }

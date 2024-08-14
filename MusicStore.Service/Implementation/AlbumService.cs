@@ -69,7 +69,7 @@ namespace MusicStore.Service.Implementation
         public List<Album> GetAlbumsByTag(string tag)
         {
             return _context.Albums
-                .Where(a => a.Tags.Contains(tag))
+                .Where(a => a.Tags != null && a.Tags.Contains(tag))
                 .Include(a => a.Tracks)
                 .Include(a => a.Artists)
                 .ToList();
@@ -84,5 +84,6 @@ namespace MusicStore.Service.Implementation
                 .ToList();
         }
     }
+
 
 }

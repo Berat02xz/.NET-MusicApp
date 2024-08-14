@@ -10,10 +10,11 @@
         public required AlbumType Type { get; set; } // Enum for album type
 
 
+        // One-to-many relationship with Track
         public List<Track> Tracks { get; set; } = new List<Track>();
-            // List of tracks in the album
+
+        // Many-to-many relationship with Artist (Handled via a junction table)
         public List<Artist> Artists { get; set; } = new List<Artist>();
-        // List of artists in the album
 
     }
 

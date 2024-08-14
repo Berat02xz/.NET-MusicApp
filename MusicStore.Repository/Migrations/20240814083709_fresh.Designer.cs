@@ -12,8 +12,8 @@ using MusicStore.Repository;
 namespace MusicStore.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240813184619_removealbumintrack")]
-    partial class removealbumintrack
+    [Migration("20240814083709_fresh")]
+    partial class fresh
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -339,7 +339,7 @@ namespace MusicStore.Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("AlbumId")
+                    b.Property<Guid>("AlbumId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("DateAdded")
@@ -364,27 +364,6 @@ namespace MusicStore.Repository.Migrations
                     b.HasIndex("AlbumId");
 
                     b.ToTable("Tracks");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.TrackArtist", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ArtistId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("TrackId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ArtistId");
-
-                    b.HasIndex("TrackId");
-
-                    b.ToTable("TrackArtists");
                 });
 
             modelBuilder.Entity("AlbumArtist", b =>
@@ -470,43 +449,18 @@ namespace MusicStore.Repository.Migrations
 
             modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
                 {
-                    b.HasOne("MusicStore.Domain.Models.Album", null)
+                    b.HasOne("MusicStore.Domain.Models.Album", "Album")
                         .WithMany("Tracks")
-                        .HasForeignKey("AlbumId");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.TrackArtist", b =>
-                {
-                    b.HasOne("MusicStore.Domain.Models.Artist", "Artist")
-                        .WithMany("TrackArtists")
-                        .HasForeignKey("ArtistId")
+                        .HasForeignKey("AlbumId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MusicStore.Domain.Models.Track", "Track")
-                        .WithMany("TrackArtists")
-                        .HasForeignKey("TrackId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Artist");
-
-                    b.Navigation("Track");
+                    b.Navigation("Album");
                 });
 
             modelBuilder.Entity("MusicStore.Domain.Models.Album", b =>
                 {
                     b.Navigation("Tracks");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.Artist", b =>
-                {
-                    b.Navigation("TrackArtists");
-                });
-
-            modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
-                {
-                    b.Navigation("TrackArtists");
                 });
 #pragma warning restore 612, 618
         }

@@ -17,9 +17,15 @@ namespace MusicStore.Repository.Implementation
             _context = context;
         }
 
-        public List<Artist> GetAllArtists() => _context.Artists.ToList();
+        public List<Artist> GetAllArtists()
+        {
+            return _context.Artists.ToList();
+        }
 
-        public Artist GetArtistById(Guid id) => _context.Artists.Find(id);
+        public Artist GetArtistById(Guid id)
+        {
+            return _context.Artists.Find(id);
+        }
 
         public void AddArtist(Artist artist)
         {
@@ -43,5 +49,6 @@ namespace MusicStore.Repository.Implementation
             }
         }
     }
+
 
 }

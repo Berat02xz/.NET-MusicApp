@@ -20,21 +20,20 @@ namespace MusicStore.Repository.Implementation
 
         public List<Album> GetAllAlbums()
         {
-            var albums = _context.Albums
+            return _context.Albums
                 .Include(a => a.Artists)
-                .Include(a => a.Tracks) // Include tracks without needing artists for tracks
+                .Include(a => a.Tracks)
                 .ToList();
-
-            return albums;
         }
 
-
-
-        public Album GetAlbumById(Guid id) => _context.Albums
-            .Include(a => a.Artists)
-            .Include(a => a.Tracks)
-            .ThenInclude(t => t.Artists)
-            .FirstOrDefault(a => a.Id == id);
+        public Album GetAlbumById(Guid id)
+        {
+            return _context.Albums
+                .Include(a => a.Artists)
+                .Include(a => a.Tracks)
+                    .ThenInclude(t => t.Artists)
+                .FirstOrDefault(a => a.Id == id);
+        }
 
         public void AddAlbum(Album album)
         {
@@ -57,6 +56,12 @@ namespace MusicStore.Repository.Implementation
                 _context.SaveChanges();
             }
         }
+
+        public void SaveChanges() // Implement this method
+        {
+            _context.SaveChanges();
+        }
     }
+
 
 }

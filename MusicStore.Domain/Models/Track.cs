@@ -8,7 +8,12 @@
         public string? YoutubeURL { get; set; }
         public DateTime DateAdded { get; set; }
 
+        // Foreign key for Album
+        public Guid AlbumId { get; set; }
+        public Album Album { get; set; }
+
+        // Many-to-many relationship with Artist (Handled via a junction table)
         public List<Artist> Artists { get; set; } = new List<Artist>();
-        // List of artists on the track
+
     }
 }

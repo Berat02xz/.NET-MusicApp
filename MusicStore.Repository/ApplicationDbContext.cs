@@ -15,7 +15,6 @@ namespace MusicStore.Repository
         public DbSet<Track> Tracks { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
-        public DbSet<TrackArtist> TrackArtists { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -25,10 +24,11 @@ namespace MusicStore.Repository
             }
         }
 
-
-
-
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            // Configure relationships and entities here
+        }
 
 
 

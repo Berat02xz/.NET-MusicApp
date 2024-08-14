@@ -10,10 +10,12 @@
         public string Tags { get; set; } // For tagging, will be comma seperated in frontend using JS
 
 
-        public List<Track>? Tracks { get; set; } = new List<Track>(); 
-        // List of tracks by the artist
-        public List<Album>? Albums { get; set; } = new List<Album>();
-        // List of albums by the artist
+
+        // Many-to-many relationship with Track
+        public List<Track> Tracks { get; set; } = new List<Track>();
+
+        // Many-to-many relationship with Album
+        public List<Album> Albums { get; set; } = new List<Album>();
 
     }
 }

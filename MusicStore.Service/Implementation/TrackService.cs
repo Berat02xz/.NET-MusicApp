@@ -21,7 +21,9 @@ namespace MusicStore.Service.Implementation
 
         public List<Track> GetAllTracks()
         {
-            return _context.Tracks.Include(t => t.Artists).ToList();
+            return _context.Tracks
+                .Include(t => t.Artists)
+                .ToList();
         }
 
         public Track GetTrackById(Guid id)
@@ -39,7 +41,10 @@ namespace MusicStore.Service.Implementation
 
         public void UpdateTrack(Track track)
         {
-            var existingTrack = _context.Tracks.FirstOrDefault(t => t.Id == track.Id);
+            var existingTrack = _context.Tracks
+                .Include(t => t.Artists)
+                .FirstOrDefault(t => t.Id == track.Id);
+
             if (existingTrack != null)
             {
                 existingTrack.Title = track.Title;
@@ -47,10 +52,28 @@ namespace MusicStore.Service.Implementation
                 existingTrack.ListenCount = track.ListenCount;
                 existingTrack.YoutubeURL = track.YoutubeURL;
                 existingTrack.DateAdded = track.DateAdded;
+                existingTrack.AlbumId = track.AlbumId;
 
                 // Update the artists associated with the track
-                existingTrack.Artists.Clear();
-                existingTrack.Artists.AddRange(track.Artists);
+                var existingArtistIds = existingTrack.Artists.Select(a => a.Id).ToList();
+                var newArtistIds = track.Artists.Select(a => a.Id).ToList();
+
+                var artistIdsToAdd = newArtistIds.Except(existingArtistIds).ToList();
+                var artistIdsToRemove = existingArtistIds.Except(newArtistIds).ToList();
+
+                if (artistIdsToAdd.Any())
+                {
+                    _context.Database.ExecuteSqlRaw(
+                        "INSERT INTO TrackArtists (TrackId, ArtistId) SELECT {0}, ArtistId FROM Artists WHERE ArtistId IN ({1})",
+                        track.Id, string.Join(",", artistIdsToAdd));
+                }
+
+                if (artistIdsToRemove.Any())
+                {
+                    _context.Database.ExecuteSqlRaw(
+                        "DELETE FROM TrackArtists WHERE TrackId = {0} AND ArtistId IN ({1})",
+                        track.Id, string.Join(",", artistIdsToRemove));
+                }
 
                 _context.SaveChanges();
             }
@@ -74,32 +97,22 @@ namespace MusicStore.Service.Implementation
                 .ToList();
         }
 
-
-
         public void AddArtistToTrack(Guid trackId, Guid artistId)
         {
-            var trackArtist = new TrackArtist
-            {
-                TrackId = trackId,
-                ArtistId = artistId
-            };
-
-            _context.TrackArtists.Add(trackArtist);
+            _context.Database.ExecuteSqlRaw(
+                "INSERT INTO TrackArtists (TrackId, ArtistId) VALUES ({0}, {1})",
+                trackId, artistId);
             _context.SaveChanges();
         }
 
         public void RemoveArtistFromTrack(Guid trackId, Guid artistId)
         {
-            var trackArtist = _context.TrackArtists
-                .FirstOrDefault(ta => ta.TrackId == trackId && ta.ArtistId == artistId);
-
-            if (trackArtist != null)
-            {
-                _context.TrackArtists.Remove(trackArtist);
-                _context.SaveChanges();
-            }
+            _context.Database.ExecuteSqlRaw(
+                "DELETE FROM TrackArtists WHERE TrackId = {0} AND ArtistId = {1}",
+                trackId, artistId);
+            _context.SaveChanges();
         }
-
     }
+
 
 }
