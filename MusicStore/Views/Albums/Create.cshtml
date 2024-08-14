@@ -202,7 +202,7 @@
                 var selectedTrackArtists = $('#selected-track-artists-' + trackIndex).find('li').map(function () {
                     return $(this).data('id');
                 }).get();
-                $('input[name="Tracks[' + trackIndex + '].SelectedArtistIds"]').val(selectedTrackArtists.join(','));
+                $('input[name="trackSelectedArtistIds[' + trackIndex + ']"]').val(selectedTrackArtists.join(','));
             }
 
 

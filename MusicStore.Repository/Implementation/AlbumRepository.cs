@@ -46,16 +46,36 @@ namespace MusicStore.Repository.Implementation
             _context.Albums.Update(album);
             _context.SaveChanges();
         }
-
-        public void DeleteAlbum(Guid id)
+        public void DeleteAlbum(Guid albumId)
         {
-            var album = _context.Albums.Find(id);
-            if (album != null)
+            var album = _context.Albums
+                .Include(a => a.Tracks)
+                .SingleOrDefault(a => a.Id == albumId);
+
+            if (album == null)
             {
-                _context.Albums.Remove(album);
-                _context.SaveChanges();
+                throw new ArgumentException("Album not found", nameof(albumId));
             }
+
+            // Remove entries from AlbumArtist table
+            var albumArtists = _context.AlbumArtist.Where(aa => aa.AlbumId == albumId).ToList();
+            _context.AlbumArtist.RemoveRange(albumArtists);
+
+            // Remove entries from ArtistTrack table
+            var trackIds = album.Tracks.Select(t => t.Id).ToList();
+            var artistTracks = _context.ArtistTrack.Where(at => trackIds.Contains(at.TrackId)).ToList();
+            _context.ArtistTrack.RemoveRange(artistTracks);
+
+            // Remove tracks related to the album
+            _context.Tracks.RemoveRange(album.Tracks);
+
+            // Remove the album
+            _context.Albums.Remove(album);
+
+            _context.SaveChanges();
         }
+
+
 
         public void SaveChanges() // Implement this method
         {

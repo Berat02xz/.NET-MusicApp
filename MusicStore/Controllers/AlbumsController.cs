@@ -137,58 +137,92 @@ namespace MusicStore.Web.Controllers
                 Debug.WriteLine($"Track added with Id: {track.Id}");
             }
 
+
             // Handle TrackArtist entries
-            foreach (var track in trackList)
+            for (int i = 0; i < trackList.Count; i++)
             {
-                var index = trackList.IndexOf(track);
-                if (index >= trackSelectedArtistIds.Length)
-                {
-                    Debug.WriteLine($"Index out of bounds: Track Id {track.Id} does not have a corresponding artist list.");
-                    continue;
-                }
+                var artistIds = trackSelectedArtistIds[i].Split(',').Select(Guid.Parse).ToList();
+                Debug.WriteLine($"Track {i + 1}: Artist IDs - {string.Join(", ", artistIds)}");
 
-                var artistIdsStr = trackSelectedArtistIds[index];
-                if (string.IsNullOrEmpty(artistIdsStr))
+                var artists = new List<Artist>();
+                foreach (var id in artistIds)
                 {
-                    Debug.WriteLine($"No artist IDs provided for Track Id: {track.Id}");
-                    continue;
-                }
-
-                Debug.WriteLine($"Track Id: {track.Id}, Artist IDs: {artistIdsStr}");
-
-                List<Guid> trackArtistIds;
-                try
-                {
-                    trackArtistIds = artistIdsStr.Split(',').Select(Guid.Parse).ToList();
-                }
-                catch (FormatException ex)
-                {
-                    Debug.WriteLine($"Error parsing artist IDs for Track Id: {track.Id}. Exception: {ex.Message}");
-                    continue;
-                }
-
-                foreach (var artistId in trackArtistIds)
-                {
-                    try
+                    Debug.WriteLine($"Fetching artist with ID: {id}");
+                    var artist = _artistRepository.GetArtistById(id);
+                    if (artist != null)
                     {
-                        _trackService.AddArtistToTrack(track.Id, artistId);
-                        Debug.WriteLine($"Added Artist Id: {artistId} to Track Id: {track.Id}");
+                        artists.Add(artist);
+                        Debug.WriteLine($"Added artist: {artist.Name} (ID: {artist.Id}) to track {trackList[i].Id}");
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        Debug.WriteLine($"Error adding Artist Id: {artistId} to Track Id: {track.Id}. Exception: {ex.Message}");
+                        Debug.WriteLine($"Artist with ID {id} not found for Track {trackList[i].Id}");
                     }
+                }
+
+                trackList[i].Artists = artists;
+                Debug.WriteLine($"Total artists added to track {trackList[i].Id}: {artists.Count}");
+
+                // Additional Debugging
+                foreach (var artist in trackList[i].Artists)
+                {
+                    Debug.WriteLine($"Track {trackList[i].Id} has artist: {artist.Name} (ID: {artist.Id})");
                 }
             }
 
+            // Ensure that the changes are saved to the database
+            try
+            {
+                _context.SaveChanges();
+                Debug.WriteLine("Changes saved to the database.");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error saving changes to the database: {ex.Message}");
+            }
 
             return RedirectToAction(nameof(Index));
         }
 
 
+        // GET: Album/Delete/5
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var album = _albumRepository.GetAlbumById(id);
+            if (album == null)
+            {
+                return NotFound();
+            }
 
+            return View(album);
+        }
 
+        // POST: Album/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(Guid id)
+        {
+            try
+            {
+                _albumRepository.DeleteAlbum(id);
+                return RedirectToAction(nameof(Index)); // Redirect to a listing page or another appropriate page
+            }
+            catch (ArgumentException)
+            {
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception and handle error
+                Debug.WriteLine($"Exception: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
 
 
         // GET: Album/Index

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using MusicStore.Domain.Models;
 using MusicStore.Domain.Identity;
+using MusicStore.Domain.JunctionTables;
 
 namespace MusicStore.Repository
 {
@@ -15,6 +16,8 @@ namespace MusicStore.Repository
         public DbSet<Track> Tracks { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
+        public DbSet<AlbumArtist> AlbumArtist { get; set; }
+        public DbSet<ArtistTrack> ArtistTrack { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,6 +31,12 @@ namespace MusicStore.Repository
         {
             base.OnModelCreating(modelBuilder);
             // Configure relationships and entities here
+            modelBuilder.Entity<AlbumArtist>()
+                 .HasKey(aa => new { aa.AlbumId, aa.ArtistId });
+
+            modelBuilder.Entity<ArtistTrack>()
+                .HasKey(at => new { at.ArtistId, at.TrackId });
+
         }
 
 
