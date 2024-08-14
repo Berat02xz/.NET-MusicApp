@@ -14,6 +14,8 @@ namespace MusicStore.Repository.Interface
         void AddTrack(Track track);
         void UpdateTrack(Track track);
         void DeleteTrack(Guid id);
+
+        List<Track> GetTracksByAlbumId(Guid albumId);
     }
 
 }

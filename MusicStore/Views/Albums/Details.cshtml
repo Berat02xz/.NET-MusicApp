@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "Details";
+    var album = ViewBag.Album as MusicStore.Domain.Models.Album;
+    var tracks = ViewBag.Tracks as List<MusicStore.Domain.Models.Track> ?? new List<MusicStore.Domain.Models.Track>();
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Album</h4>
+    <hr />
+    @if (album == null)
+    {
+        <p>Album not found.</p>
+    }
+    else
+    {
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => album.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => album.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => album.CoverImageUrl)
+            </dt>
+            <dd class="col-sm-10">
+                <img src="@album.CoverImageUrl" alt="Cover Image" width="100" />
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => album.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @album.Description
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => album.ReleaseDate)
+            </dt>
+            <dd class="col-sm-10">
+                @album.ReleaseDate.ToShortDateString()
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => album.Tags)
+            </dt>
+            <dd class="col-sm-10">
+                @album.Tags
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => album.Type)
+            </dt>
+            <dd class="col-sm-10">
+                @album.Type
+            </dd>
+        </dl>
+    }
+</div>
+
+<div>
+    <h4>Tracks</h4>
+    <hr />
+    @if (tracks.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Duration</th>
+                    <th>Listen Count</th>
+                    <th>YouTube URL</th>
+                    <th>Date Added</th>
+                    <th>Artists</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var track in tracks)
+                {
+                    <tr>
+                        <td>@track.Title</td>
+                        <td>@track.Duration</td>
+                        <td>@track.ListenCount</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(track.YoutubeURL))
+                            {
+                                <a href="@track.YoutubeURL" target="_blank">Watch</a>
+                            }
+                            else
+                            {
+                                <p>No URL</p>
+                            }
+                        </td>
+                        <td>@track.DateAdded.ToShortDateString()</td>
+                        <td>
+                            @if (track.Artists != null && track.Artists.Any())
+                            {
+                                <ul>
+                                    @foreach (var artist in track.Artists)
+                                    {
+                                        <li>@artist.Name</li>
+                                    }
+                                </ul>
+                            }
+                            else
+                            {
+                                <p>No artists</p>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No tracks available.</p>
+    }
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@album?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

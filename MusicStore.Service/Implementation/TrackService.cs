@@ -112,6 +112,18 @@ namespace MusicStore.Service.Implementation
                 trackId, artistId);
             _context.SaveChanges();
         }
+
+
+
+        public List<Track> GetTracksByAlbumId(Guid albumId)
+        {
+            return _context.Tracks
+                .Where(t => t.AlbumId == albumId)
+                .Include(t => t.Artists)
+                .ToList();
+        }
+
+
     }
 
 

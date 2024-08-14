@@ -47,6 +47,36 @@ namespace MusicStore.Web.Controllers
         }
 
 
+        public IActionResult Details(Guid id)
+        {
+            var album = _albumRepository.GetAlbumById(id);
+            var tracks = _trackRepository.GetAllTracks().Where(t => t.AlbumId == id).ToList();
+
+            if (album == null)
+            {
+                return NotFound();
+            }
+
+            if(tracks == null)
+            {
+                return NotFound();
+            }
+
+            //Debugging
+            Debug.WriteLine($"Album: {album.Title}, {album.Description}, {album.Tags}, {album.CoverImageUrl}, {album.Type}, {album.ReleaseDate}");
+            foreach (var track in tracks)
+            {
+                Debug.WriteLine($"Track: {track.Title}, {track.Duration}, {track.YoutubeURL}");
+            }
+
+            ViewBag.Album = album;
+            ViewBag.Tracks = tracks;
+
+            return View();
+        }
+
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

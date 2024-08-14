@@ -19,6 +19,8 @@ namespace MusicStore.Service.Interface
         // New methods for managing TrackArtist relationships
         void AddArtistToTrack(Guid trackId, Guid artistId);
         void RemoveArtistFromTrack(Guid trackId, Guid artistId);
+
+        List<Track> GetTracksByAlbumId(Guid albumId);
     }
 
 }

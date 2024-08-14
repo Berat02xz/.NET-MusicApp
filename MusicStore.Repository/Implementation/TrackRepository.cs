@@ -51,6 +51,17 @@ namespace MusicStore.Repository.Implementation
                 _context.SaveChanges();
             }
         }
+
+
+        public List<Track> GetTracksByAlbumId(Guid albumId)
+        {
+            return _context.Tracks
+                .Where(t => t.AlbumId == albumId)
+                .ToList();
+        }
+
+
+
     }
 
 }
