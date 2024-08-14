@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicStore.Domain.JunctionTables
 {
-    public class ArtistTrack
+    public class ArtistTrack : BaseEntity
     {
         public Guid ArtistId { get; set; }
         public Artist Artist { get; set; }

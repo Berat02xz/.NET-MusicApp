@@ -58,13 +58,13 @@ namespace MusicStore.Repository.Implementation
             }
 
             // Remove entries from AlbumArtist table
-            var albumArtists = _context.AlbumArtist.Where(aa => aa.AlbumId == albumId).ToList();
-            _context.AlbumArtist.RemoveRange(albumArtists);
+            var albumArtists = _context.AlbumArtists.Where(aa => aa.AlbumId == albumId).ToList();
+            _context.AlbumArtists.RemoveRange(albumArtists);
 
             // Remove entries from ArtistTrack table
             var trackIds = album.Tracks.Select(t => t.Id).ToList();
-            var artistTracks = _context.ArtistTrack.Where(at => trackIds.Contains(at.TrackId)).ToList();
-            _context.ArtistTrack.RemoveRange(artistTracks);
+            var artistTracks = _context.ArtistTracks.Where(at => trackIds.Contains(at.TrackId)).ToList();
+            _context.ArtistTracks.RemoveRange(artistTracks);
 
             // Remove tracks related to the album
             _context.Tracks.RemoveRange(album.Tracks);
