@@ -70,6 +70,7 @@
                     <th>YouTube URL</th>
                     <th>Date Added</th>
                     <th>Artists</th>
+                    <th>Actions</th> <!-- Add an Actions column -->
                 </tr>
             </thead>
             <tbody>
@@ -105,6 +106,15 @@
                                 <p>No artists</p>
                             }
                         </td>
+                        <td>
+                            <!-- Edit Button -->
+                            <a href="@Url.Action("Edit", "Tracks", new { id = track.Id })" class="btn btn-primary btn-sm">Edit</a>
+                            <!-- Delete Button -->
+                            <form asp-action="Delete" method="post" style="display:inline;" asp-controller="Tracks">
+                                <input type="hidden" name="id" value="@track.Id" />
+                                <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>
@@ -117,6 +127,5 @@
 </div>
 
 <div>
-    <a asp-action="Edit" asp-route-id="@album?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

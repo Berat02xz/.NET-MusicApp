@@ -48,6 +48,13 @@ namespace MusicStore.Repository.Implementation
                 _context.SaveChanges();
             }
         }
+
+        public List<Artist> GetArtistsByIds(IEnumerable<Guid> ids)
+        {
+            return _context.Artists
+                .Where(artist => ids.Contains(artist.Id))
+                .ToList();
+        }
     }
 
 

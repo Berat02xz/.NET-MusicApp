@@ -1,0 +1,137 @@
+﻿@model MusicStore.Domain.Models.Track
+@using System.Text.Json
+@{
+    ViewBag.Title = "Edit Track";
+    var track = ViewBag.Track as MusicStore.Domain.Models.Track;
+    var artists = ViewBag.Artists as List<MusicStore.Domain.Models.Artist>;
+
+    // Check if track or artists is null
+
+        // Serialize the artists list for use in JavaScript
+        var artistsJson = JsonSerializer.Serialize(artists);
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Basic styling for search results */
+        #ArtistResults div {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+            #ArtistResults div:hover {
+                background-color: #f0f0f0;
+            }
+    </style>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+
+    @if (track != null)
+    {
+        <form asp-action="Edit">
+            <input type="hidden" name="Id" value="@track.Id" />
+            <input type="hidden" name="AlbumId" value="@track.AlbumId" />
+
+
+            <div>
+                <label for="Title">Title:</label>
+                <input type="text" id="Title" name="Title" value="@track.Title" required />
+            </div>
+
+            <div>
+                <label for="Duration">Duration:</label>
+                <input type="text" id="Duration" name="Duration" value="@track.Duration" required />
+            </div>
+
+            <div>
+                <label for="ListenCount">Listen Count:</label>
+                <input type="number" id="ListenCount" name="ListenCount" value="@track.ListenCount" readonly />
+            </div>
+
+            <div>
+                <label for="YoutubeURL">YouTube URL:</label>
+                <input type="text" id="YoutubeURL" name="YoutubeURL" value="@track.YoutubeURL" />
+            </div>
+
+            <div>
+                <label for="DateAdded">Date Added:</label>
+                <input type="text" id="DateAdded" name="DateAdded" value="@track.DateAdded.ToString("yyyy-MM-dd")" readonly />
+            </div>
+
+            <div>
+                <label for="Artists">Artists:</label>
+                <input type="text" id="ArtistSearch" placeholder="Search artists..." />
+                <div id="ArtistResults"></div>
+                <ul id="SelectedArtists">
+                    @if (track.Artists != null)
+                    {
+                        @foreach (var artist in track.Artists)
+                        {
+                            <li>
+                                <span>@artist.Name</span>
+                                <input type="hidden" name="SelectedArtistIds" value="@artist.Id" />
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+
+            <button type="submit">Save</button>
+        </form>
+
+        <script>
+            $(document).ready(function () {
+                var artists = @Html.Raw(artistsJson);
+
+                $("#ArtistSearch").on("input", function () {
+                    var query = $(this).val().toLowerCase();
+                    var results = artists.filter(function (artist) {
+                        return artist.Name.toLowerCase().includes(query);
+                    });
+
+                    $("#ArtistResults").empty();
+                    if (results.length > 0) {
+                        results.forEach(function (artist) {
+                            var resultItem = $("<div>")
+                                .text(artist.Name)
+                                .data("id", artist.Id)
+                                .click(function () {
+                                    var artistId = $(this).data("id");
+                                    var artistName = $(this).text();
+
+                                    if ($("#SelectedArtists input[value='" + artistId + "']").length === 0) {
+                                        $("#SelectedArtists").append(
+                                            $("<li>")
+                                                .append($("<span>").text(artistName))
+                                                .append($("<input>")
+                                                    .attr("type", "hidden")
+                                                    .attr("name", "SelectedArtistIds")
+                                                    .val(artistId))
+                                        );
+                                    }
+                                    $("#ArtistResults").empty();
+                                    $("#ArtistSearch").val("");
+                                });
+                            $("#ArtistResults").append(resultItem);
+                        });
+                    } else {
+                        $("#ArtistResults").append($("<div>").text("No results found"));
+                    }
+                });
+            });
+        </script>
+    }
+    else
+    {
+        <p>Track data is not available.</p>
+    }
+</body>
+</html>

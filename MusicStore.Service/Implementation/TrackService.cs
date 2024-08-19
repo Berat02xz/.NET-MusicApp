@@ -84,10 +84,18 @@ namespace MusicStore.Service.Implementation
             var track = _context.Tracks.FirstOrDefault(t => t.Id == id);
             if (track != null)
             {
+                var artistTracks = _context.ArtistTracks.Where(at => at.TrackId == id).ToList();
+                if (artistTracks.Any())
+                {
+                    _context.ArtistTracks.RemoveRange(artistTracks);
+                }
+
                 _context.Tracks.Remove(track);
+
                 _context.SaveChanges();
             }
         }
+
 
         public List<Track> GetTracksByArtistId(Guid artistId)
         {

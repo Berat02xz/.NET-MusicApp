@@ -12,6 +12,6 @@ namespace MusicStore.Service.Interface
         void UpdateUser(MusicStoreUser user);
         void DeleteUser(string id);
 
-        // Methods for managing playlists
+        // Methods for managing playlists (Future Implementation Planned)
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore; // Assuming you are using Entity Framework
-using MusicStore.Domain.Models; // Replace with the correct namespace
+using Microsoft.EntityFrameworkCore; 
+using MusicStore.Domain.Models; 
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MusicStore.Repository;
 using System.Linq;
@@ -12,6 +12,7 @@ using System.Diagnostics;
 using NuGet.DependencyResolver;
 using MusicStore.Service.Interface;
 using MusicStore.Repository.Interface;
+using MusicStore.Service.Implementation;
 
 namespace MusicStore.Web.Controllers
 {
@@ -21,20 +22,20 @@ namespace MusicStore.Web.Controllers
         private readonly IAlbumRepository _albumRepository;
         private readonly ITrackRepository _trackRepository;
         private readonly ITrackService _trackService;
-        private readonly ApplicationDbContext _context; // Add DbContext here
+        private readonly ApplicationDbContext _context; 
 
         public AlbumsController(
             IArtistRepository artistRepository,
             IAlbumRepository albumRepository,
             ITrackRepository trackRepository,
             ITrackService trackService,
-            ApplicationDbContext context) // Inject DbContext
+            ApplicationDbContext context) 
         {
             _artistRepository = artistRepository;
             _albumRepository = albumRepository;
             _trackRepository = trackRepository;
             _trackService = trackService;
-            _context = context; // Initialize DbContext
+            _context = context; 
         }
 
         // GET: Album/Create
@@ -73,6 +74,44 @@ namespace MusicStore.Web.Controllers
             ViewBag.Tracks = tracks;
 
             return View();
+        }
+
+
+
+        // GET: Albums/Edit/5
+        public IActionResult Edit(Guid id)
+        {
+            var album = _albumRepository.GetAlbumById(id);
+            if (album == null)
+            {
+                return NotFound();
+            }
+            return View(album);
+        }
+
+        // POST: Albums/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Guid id, Album album)
+        {
+            if (id != album.Id)
+            {
+                return BadRequest();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _albumRepository.UpdateAlbum(album);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                }
+            }
+            return View(album);
         }
 
 
@@ -240,7 +279,7 @@ namespace MusicStore.Web.Controllers
             try
             {
                 _albumRepository.DeleteAlbum(id);
-                return RedirectToAction(nameof(Index)); // Redirect to a listing page or another appropriate page
+                return RedirectToAction(nameof(Index)); 
             }
             catch (ArgumentException)
             {

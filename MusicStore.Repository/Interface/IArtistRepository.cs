@@ -14,5 +14,8 @@ namespace MusicStore.Repository.Interface
         void AddArtist(Artist artist);
         void UpdateArtist(Artist artist);
         void DeleteArtist(Guid id);
+
+        List<Artist> GetArtistsByIds(IEnumerable<Guid> ids);
+
     }
 }
