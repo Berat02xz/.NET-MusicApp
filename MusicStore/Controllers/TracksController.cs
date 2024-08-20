@@ -8,6 +8,8 @@ using System.Text.Json;
 using Azure.Core;
 using System.Diagnostics;
 using NuGet.DependencyResolver;
+using MusicStore.Repository.Implementation;
+using System.Text.Json.Serialization;
 
 namespace MusicStore.Web.Controllers
 {
@@ -16,106 +18,177 @@ namespace MusicStore.Web.Controllers
         private readonly ITrackService _trackService;
         private readonly IArtistRepository _artistRepository;
         private readonly ApplicationDbContext _context;
-
-        public TracksController(ITrackService trackService, IArtistRepository artistRepository, ApplicationDbContext context)
+        private readonly IAlbumService _albumService;
+        public TracksController(ITrackService trackService, IArtistRepository artistRepository, ApplicationDbContext context, IAlbumService albumService)
         {
             _trackService = trackService;
             _artistRepository = artistRepository;
             _context = context;
+            _albumService = albumService;
         }
 
-        // GET: Tracks/Edit/5
-        public IActionResult Edit(Guid id)
+        // GET: Tracks/Create
+        public IActionResult Create(Guid albumId)
         {
-            var track = _trackService.GetTrackById(id);
+            // Retrieve the album to ensure it exists
+            var album = _albumService.GetAlbumById(albumId);
+            if (album == null)
+            {
+                return NotFound();
+            }
+
+            // Create a new Track instance if needed
+            var track = new Track { AlbumId = albumId }; // Initialize as needed
+
+            // Retrieve all artists
             var artists = _artistRepository.GetAllArtists();
 
+            // Configure JsonSerializerOptions to handle cycles and format the JSON
             var options = new JsonSerializerOptions
             {
                 ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve,
                 WriteIndented = true // Optional: Makes the output more readable
             };
 
+            // Pass the track, albumId, and the list of artists to the view via ViewBag
+            ViewBag.AlbumId = albumId;
             ViewBag.Artists = JsonSerializer.Serialize(artists, options);
-            ViewBag.Track = track;
-
-            return View();
+            return View(track); // Pass the track to the view
         }
 
 
 
-        // POST: Tracks/Edit
-
+        // POST: Tracks/Create
         [HttpPost]
-        public IActionResult Edit(Track model, Guid[] selectedArtistIds)
+        public IActionResult Create(Track track, string[] selectedArtistIds)
         {
-            Debug.WriteLine("Edit POST action started.");
-
-            // Log the received model
-            Debug.WriteLine($"Received model: Id={model.Id}, Title={model.Title}, AlbumId={model.AlbumId}");
-
-            // Check if model state is valid
-            if (!ModelState.IsValid)
+            // Log the received Track and Artist IDs
+            Debug.WriteLine("Received Track Model:");
+            Debug.WriteLine($"Title: {track.Title}, Duration: {track.Duration}, AlbumId: {track.AlbumId}");
+            Debug.WriteLine("Received Artist IDs:");
+            foreach (var id in selectedArtistIds)
             {
-                Debug.WriteLine("Model state is invalid.");
+                Debug.WriteLine(id);
+            }
 
-                // Log detailed validation errors
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Retrieve the selected artists
+                    var artistIds = selectedArtistIds.Select(id => Guid.Parse(id)).ToList();
+                    var artists = _artistRepository.GetArtistsByIds(artistIds);
+
+                    track.Artists = artists;
+                    track.AlbumId = track.AlbumId; // Ensure this is properly set
+
+                    // Save the track to the database
+                    _trackService.AddTrack(track);
+                    Debug.WriteLine("Track saved successfully.");
+
+                    // Redirect to a suitable page
+                    return RedirectToAction("Index", "Albums");
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Exception occurred: {ex.Message}");
+                    ModelState.AddModelError("", "An error occurred while creating the track.");
+                }
+            }
+            else
+            {
+                // Log validation errors
                 foreach (var modelState in ModelState)
                 {
                     foreach (var error in modelState.Value.Errors)
                     {
-                        Debug.WriteLine($"Error for {modelState.Key}: {error.ErrorMessage}");
+                        Debug.WriteLine($"Error in {modelState.Key}: {error.ErrorMessage}");
                     }
                 }
-
-                return View(model);
             }
 
-            Debug.WriteLine($"Model state is valid. Track ID: {model.Id}");
 
-            var track = _trackService.GetTrackById(model.Id);
+            return RedirectToAction("Index", "Albums");
+        }
+
+
+
+
+
+
+        // GET: Tracks/Edit/5
+        public IActionResult Edit(Guid id)
+        {
+            var track = _trackService.GetTrackById(id);
             if (track == null)
             {
-                Debug.WriteLine("Track not found.");
-                return NotFound(); // Or handle the null case appropriately
+                return NotFound();
             }
 
-            Debug.WriteLine($"Track found. Title: {track.Title}");
+            var artists = _artistRepository.GetAllArtists();
+            var artistIds = track.Artists.Select(a => a.Id).ToList();
+
+            ViewBag.Artists = JsonSerializer.Serialize(artists, new JsonSerializerOptions { ReferenceHandler = ReferenceHandler.Preserve });
+            ViewBag.SelectedArtistIds = JsonSerializer.Serialize(artistIds);
+
+            return View(track);
+        }
+
+
+
+
+        // POST: Tracks/Edit
+        [HttpPost]
+        public IActionResult Edit(Track track, string selectedArtistIds)
+        {
+            // Log received data for debugging
+            Debug.WriteLine("Received Track ID: " + track.Id);
+            Debug.WriteLine("Received Selected Artist IDs: " + selectedArtistIds);
+
+            // Convert selectedArtistIds to a list of GUIDs with improved error handling
+            var artistIds = selectedArtistIds.Split(',')
+                                             .Select(id => id.Trim())
+                                             .Where(id => !string.IsNullOrEmpty(id))
+                                             .Select(id =>
+                                             {
+                                                 Guid parsedGuid;
+                                                 bool success = Guid.TryParse(id, out parsedGuid);
+                                                 if (!success)
+                                                 {
+                                                     Debug.WriteLine($"Failed to parse GUID: {id}");
+                                                 }
+                                                 return parsedGuid;
+                                             })
+                                             .Where(guid => guid != Guid.Empty)
+                                             .ToList();
+
+
+            // Log the parsed artist IDs
+            Debug.WriteLine("Parsed Artist IDs: " + string.Join(", ", artistIds));
+
+            // Retrieve the track to update
+            var existingTrack = _trackService.GetTrackById(track.Id);
+            if (existingTrack == null)
+            {
+                return NotFound();
+            }
 
             // Update track properties
-            track.Title = model.Title;
-            track.Duration = model.Duration;
-            track.YoutubeURL = model.YoutubeURL;
-            track.AlbumId = model.AlbumId; // Ensure the AlbumId is updated
+            existingTrack.Title = track.Title;
+            existingTrack.Duration = track.Duration;
+            existingTrack.YoutubeURL = track.YoutubeURL;
+            existingTrack.ListenCount = track.ListenCount;
 
-            Debug.WriteLine("Updating track artists.");
+            // Fetch the selected artists
+            var artists = _artistRepository.GetArtistsByIds(artistIds);
+            existingTrack.Artists = artists;
 
-            // Fetch selected artists
-            var selectedArtists = _artistRepository.GetArtistsByIds(selectedArtistIds);
+            // Save changes
+            _trackService.UpdateTrack(existingTrack);
 
-            // Check if the number of selected artists matches the number of IDs
-            if (selectedArtists.Count != selectedArtistIds.Length)
-            {
-                Debug.WriteLine("Mismatch between selected artist IDs and fetched artists.");
-            }
+            // Redirect to the index or another view
+            return RedirectToAction("Index", "Albums");
 
-            track.Artists = selectedArtists;
-
-            // Update the track
-            try
-            {
-                _trackService.UpdateTrack(track);
-                Debug.WriteLine("Track updated successfully.");
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error updating track: {ex.Message}");
-                // Handle the exception appropriately
-                return StatusCode(500, "Internal server error"); // Or another appropriate response
-            }
-
-            // Redirect or return a different view
-            return RedirectToAction("Index"); // Or another appropriate action
         }
 
 

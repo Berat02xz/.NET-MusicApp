@@ -4,8 +4,8 @@
 @using MusicStore.Domain.Models
 
 @{
-    ViewBag.Title = "Edit Track";
-    var track = Model;
+    ViewBag.Title = "Add Track";
+    var track = Model ?? new Track(); // Handle case when Model is null
     var artistsJson = ViewBag.Artists as string;
     var selectedArtistIdsJson = ViewBag.SelectedArtistIds as string;
 
@@ -33,7 +33,7 @@
 
 <h1>@ViewBag.Title</h1>
 
-<form asp-action="Edit" method="post">
+<form asp-action="Create" method="post">
     @Html.HiddenFor(model => model.Id)
 
     <div class="form-group">
@@ -61,13 +61,15 @@
         <input type="text" class="form-control track-artist-search" placeholder="Search for artists..." />
         <div class="list-group track-artist-list"></div>
         <ul class="list-group selected-track-artists" id="selected-track-artists">
-            <!-- Existing selected track artists will be shown here -->
+            <!-- Selected track artists will be shown here -->
         </ul>
         <input type="hidden" name="SelectedArtistIds" />
     </div>
+    <input type="hidden" name="AlbumId" value="@ViewBag.AlbumId" />
 
     <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>
+
 @section Scripts {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -79,21 +81,9 @@
                 var artists = artistsObject.$values; // Adjust based on actual data structure
                 console.log('Artists:', artists); // Log artists data
 
-                var selectedArtistIdsJson = @Html.Raw(Json.Serialize(ViewBag.SelectedArtistIds));
-                var selectedArtistIds = JSON.parse(selectedArtistIdsJson);
+                // Initialize empty selected artist IDs
+                var selectedArtistIds = [];
                 console.log('Selected Artist IDs:', selectedArtistIds); // Log selected artist IDs
-
-                // Display existing selected artists
-                selectedArtistIds.forEach(function (id) {
-                    var artist = artists.find(a => a.Id === id); // Adjust property access
-                    if (artist) {
-                        $('#selected-track-artists').append(`
-                                    <li class="list-group-item" data-id="${artist.Id}">
-                                        ${artist.Name}
-                                        <button type="button" class="btn btn-sm btn-danger remove-artist">Remove</button>
-                                    </li>`);
-                    }
-                });
 
                 // Search for artists
                 $('.track-artist-search').on('input', function () {
@@ -153,8 +143,6 @@
                     console.log('Updating Selected Artist IDs:', selectedArtists);
 
                     $('input[name="SelectedArtistIds"]').val(selectedArtists.join(','));
-                    // Display for debugging
-                    $('#selected-artist-ids').val(selectedArtists.join(','));
                 }
 
                 // Disable editing of Listen Count
@@ -165,4 +153,3 @@
         });
     </script>
 }
-

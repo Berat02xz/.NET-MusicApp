@@ -58,6 +58,7 @@
 
 <div>
     <h4>Tracks</h4>
+    <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id">Add Track</a>
     <hr />
     @if (tracks.Any())
     {
