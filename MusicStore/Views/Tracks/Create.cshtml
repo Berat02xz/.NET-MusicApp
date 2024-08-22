@@ -3,18 +3,6 @@
 @using System.Text.Json.Serialization
 @using MusicStore.Domain.Models
 
-@{
-    ViewBag.Title = "Add Track";
-    var track = Model ?? new Track(); // Handle case when Model is null
-    var artistsJson = ViewBag.Artists as string;
-    var selectedArtistIdsJson = ViewBag.SelectedArtistIds as string;
-
-    // Configure JsonSerializerOptions to handle cycles
-    var options = new JsonSerializerOptions
-            {
-                ReferenceHandler = ReferenceHandler.Preserve
-            };
-}
 <style>
     .track-artist-list a {
         cursor: pointer;
@@ -34,26 +22,22 @@
 <h1>@ViewBag.Title</h1>
 
 <form asp-action="Create" method="post">
-    @Html.HiddenFor(model => model.Id)
+    <!-- Hidden field for AlbumId -->
+    <input type="hidden" name="AlbumId" value="@ViewBag.AlbumId" />
 
     <div class="form-group">
         <label for="Title">Title</label>
-        <input type="text" name="Title" value="@Model.Title" class="form-control" required />
+        <input type="text" id="Title" name="Title" value="@Model.Title" class="form-control" required />
     </div>
 
     <div class="form-group">
         <label for="Duration">Duration</label>
-        <input type="text" name="Duration" value="@Model.Duration" class="form-control" />
+        <input type="text" id="Duration" name="Duration" value="@Model.Duration" class="form-control" />
     </div>
 
     <div class="form-group">
         <label for="YoutubeURL">YouTube URL</label>
-        <input type="text" name="YoutubeURL" value="@Model.YoutubeURL" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Listen Count</label>
-        <input type="text" value="@Model.ListenCount" class="form-control" readonly />
+        <input type="text" id="YoutubeURL" name="YoutubeURL" value="@Model.YoutubeURL" class="form-control" />
     </div>
 
     <div class="form-group">
@@ -63,9 +47,8 @@
         <ul class="list-group selected-track-artists" id="selected-track-artists">
             <!-- Selected track artists will be shown here -->
         </ul>
-        <input type="hidden" name="SelectedArtistIds" />
+        <input type="hidden" name="SelectedArtistIds" id="selected-artist-ids" />
     </div>
-    <input type="hidden" name="AlbumId" value="@ViewBag.AlbumId" />
 
     <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>

@@ -103,6 +103,8 @@ namespace MusicStore.Web.Controllers
             {
                 try
                 {
+                    album.ReleaseDate = DateTime.Now;
+
                     _albumRepository.UpdateAlbum(album);
                     return RedirectToAction(nameof(Index));
                 }

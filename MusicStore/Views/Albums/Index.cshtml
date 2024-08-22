@@ -1,6 +1,51 @@
 ﻿@model IEnumerable<MusicStore.Domain.Models.Album>
 
-<h2>Albums</h2>
+
+
+<style>
+    .album-card {
+        position: relative;
+        display: block; /* Make sure the card behaves like a block element */
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none; /* Remove underline from link */
+        color: inherit; /* Inherit color from parent */
+    }
+
+        .album-card .card-body {
+            text-align: center; /* Center text if needed */
+        }
+
+        .album-card .card-title,
+        .album-card .card-text {
+            color: inherit; /* Inherit color from parent link */
+        }
+
+    .album-cover {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        width: 100%; /* Ensure the image covers the card width */
+    }
+
+    .album-card:hover .album-cover {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+
+
+
+    .album-card:hover .album-hover-overlay {
+        opacity: 1;
+    }
+
+    .play-button {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .play-button:hover {
+           color: #f39c12; /* Change color on hover if desired */
+     }
+</style>
 
 <!-- Display Model Errors -->
 @if (!ViewData.ModelState.IsValid)
@@ -16,37 +61,41 @@
 }
 
 
-<p>
-    <a asp-action="Create">Add Album</a>
-</p>
+<div class="container">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Cover Image</th>
-            <th>Description</th>
-            <th>Release Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
+    <p>
+        <a asp-action="Create" class="btn btn-dark">Add Album</a>
+    </p>
+
+    <div class="row">
         @foreach (var album in Model)
         {
-            <tr>
-                <td>@album.Title</td>
-                <td><img src="@album.CoverImageUrl" alt="Cover Image" width="100" /></td>
-                <td>@album.Description</td>
-                <td>@album.ReleaseDate.ToShortDateString()</td>
-                <td>
-                    <a href="@Url.Action("Details", new { id = album.Id })">Details</a> |
-                    <a href="@Url.Action("Edit", new { id = album.Id })" class="btn btn-primary">Edit</a> |
-                    <form asp-action="Delete" method="post" style="display:inline;">
-                        <input type="hidden" name="id" value="@album.Id" />
-                        <input type="submit" value="Delete" class="btn btn-danger" />
-                    </form>
-                </td>
-            </tr>
+            <div class="col-md-4 mb-4">
+                <!-- Wrap the entire card in a link -->
+                <a href="@Url.Action("Details", new { id = album.Id })" class="card album-card">
+                    <img src="@album.CoverImageUrl" class="card-img-top album-cover" alt="Cover Image" />
+                    <div class="card-body">
+                        <h2 class="card-title">@album.Title</h2>
+                        <p class="card-text">
+                            @if (album.Artists != null && album.Artists.Any())
+                            {
+                                    @foreach (var artist in album.Artists)
+                                    {
+                                        <h6>@artist.Name</h6>
+                                    }
+
+                            }
+                            else
+                            {
+                            <p>No artists</p>
+                            }
+                        </p>
+                        <p class="card-text">
+                            @album.Type
+                        </p>
+                    </div>
+                </a>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+</div>

@@ -4,6 +4,23 @@
     var tracks = ViewBag.Tracks as List<MusicStore.Domain.Models.Track> ?? new List<MusicStore.Domain.Models.Track>();
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<style>
+    .play-button {
+        font-size: 24px;
+        color: #000000; /* Adjust color as needed */
+        cursor: pointer;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+        .play-button:hover {
+            transform: scale(1.2);
+            color: #0056b3; /* Adjust color on hover as needed */
+        }
+</style>
+
+
 <h1>Details</h1>
 
 <div>
@@ -58,13 +75,14 @@
 
 <div>
     <h4>Tracks</h4>
-    <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id">Add Track</a>
+    <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id" class="btn btn-primary">Add Track</a>
     <hr />
     @if (tracks.Any())
     {
         <table class="table">
             <thead>
                 <tr>
+                    <th>Play</th>
                     <th>Title</th>
                     <th>Duration</th>
                     <th>Listen Count</th>
@@ -78,6 +96,14 @@
                 @foreach (var track in tracks)
                 {
                     <tr>
+                        <td>
+                            <!-- Play Button Symbol using Font Awesome -->
+                            <i class="fa-solid fa-play play-button"
+                               data-id="@track.Id"
+                               data-url="@Url.Action("Play", "Tracks")"
+                               onclick="playTrack($(this).data('id'), $(this).data('url'))">
+                            </i>
+                        </td>
                         <td>@track.Title</td>
                         <td>@track.Duration</td>
                         <td>@track.ListenCount</td>
@@ -130,3 +156,21 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function playTrack(trackId, playUrl) {
+            // Send an AJAX request to increment the listen count
+            $.post(playUrl, { id: trackId }, function (response) {
+                console.log('Track listened:', trackId);
+                // Optionally, update the UI to reflect the incremented listen count
+                location.reload();
+
+            }).fail(function () {
+                alert('Error occurred while playing the track.');
+            });
+        }
+    </script>
+}

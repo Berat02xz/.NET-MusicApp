@@ -10,6 +10,8 @@ using System.Diagnostics;
 using NuGet.DependencyResolver;
 using MusicStore.Repository.Implementation;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Options;
 
 namespace MusicStore.Web.Controllers
 {
@@ -27,7 +29,8 @@ namespace MusicStore.Web.Controllers
             _albumService = albumService;
         }
 
-        // GET: Tracks/Create
+
+
         public IActionResult Create(Guid albumId)
         {
             // Retrieve the album to ensure it exists
@@ -37,57 +40,85 @@ namespace MusicStore.Web.Controllers
                 return NotFound();
             }
 
-            // Create a new Track instance if needed
-            var track = new Track { AlbumId = albumId }; // Initialize as needed
-
             // Retrieve all artists
             var artists = _artistRepository.GetAllArtists();
 
-            // Configure JsonSerializerOptions to handle cycles and format the JSON
+            // Configure JsonSerializerOptions to handle cycles
             var options = new JsonSerializerOptions
             {
-                ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve,
-                WriteIndented = true // Optional: Makes the output more readable
+                ReferenceHandler = ReferenceHandler.Preserve
             };
 
-            // Pass the track, albumId, and the list of artists to the view via ViewBag
+            // Serialize the artists list to JSON
+            var artistsJson = JsonSerializer.Serialize(artists, options);
+
+            // Pass the albumId and artists JSON to the view via ViewBag
             ViewBag.AlbumId = albumId;
-            ViewBag.Artists = JsonSerializer.Serialize(artists, options);
-            return View(track); // Pass the track to the view
+            ViewBag.Artists = artistsJson;
+
+            // Return the view with a blank track model
+            return View(new Track());
         }
+
+
+
+
+
 
 
 
         // POST: Tracks/Create
         [HttpPost]
-        public IActionResult Create(Track track, string[] selectedArtistIds)
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(string title, string duration, Guid albumId, string[] selectedArtistIds, string youtubeURL)
         {
-            // Log the received Track and Artist IDs
-            Debug.WriteLine("Received Track Model:");
-            Debug.WriteLine($"Title: {track.Title}, Duration: {track.Duration}, AlbumId: {track.AlbumId}");
-            Debug.WriteLine("Received Artist IDs:");
-            foreach (var id in selectedArtistIds)
+            Debug.WriteLine("Received Track Data:");
+            Debug.WriteLine($"Title: {title}, Duration: {duration}, AlbumId: {albumId}");
+
+            if (selectedArtistIds == null || selectedArtistIds.Length == 0)
             {
-                Debug.WriteLine(id);
+                ModelState.AddModelError("", "Please select at least one artist.");
+            }
+
+            if (albumId == Guid.Empty)
+            {
+                ModelState.AddModelError("AlbumId", "The Album field is required.");
             }
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    // Retrieve the selected artists
+                    string formattedDuration = (duration.Length == 5 && duration[2] == ':') ? duration : $"{duration}:00";
+
+                    // Create a new Track instance and populate it
+                    var track = new Track
+                    {
+                        Title = title,
+                        Duration = formattedDuration,
+                        YoutubeURL = youtubeURL,
+                        AlbumId = albumId,
+                        DateAdded = DateTime.Now
+                    };
+
+                    // Fetch the album object using AlbumId
+                    track.Album = _albumService.GetAlbumById(albumId);
+
+                    // Convert the selected artist IDs to a list of GUIDs
                     var artistIds = selectedArtistIds.Select(id => Guid.Parse(id)).ToList();
+
+                    // Retrieve the corresponding artist entities from the repository
                     var artists = _artistRepository.GetArtistsByIds(artistIds);
 
+                    // Assign the selected artists to the track
                     track.Artists = artists;
-                    track.AlbumId = track.AlbumId; // Ensure this is properly set
 
-                    // Save the track to the database
+                    // Save the track to the database using the service layer
                     _trackService.AddTrack(track);
                     Debug.WriteLine("Track saved successfully.");
 
-                    // Redirect to a suitable page
-                    return RedirectToAction("Index", "Albums");
+                    // Redirect to a suitable page, typically back to the album's details or index
+                    return RedirectToAction("Details", "Albums", new { id = albumId });
                 }
                 catch (Exception ex)
                 {
@@ -95,21 +126,33 @@ namespace MusicStore.Web.Controllers
                     ModelState.AddModelError("", "An error occurred while creating the track.");
                 }
             }
-            else
+
+            // Log validation errors
+            foreach (var modelState in ModelState)
             {
-                // Log validation errors
-                foreach (var modelState in ModelState)
+                foreach (var error in modelState.Value.Errors)
                 {
-                    foreach (var error in modelState.Value.Errors)
-                    {
-                        Debug.WriteLine($"Error in {modelState.Key}: {error.ErrorMessage}");
-                    }
+                    Debug.WriteLine($"Error in {modelState.Key}: {error.ErrorMessage}");
                 }
             }
 
+            // Re-populate the artist selection list in case of errors
+            var artistList = _artistRepository.GetAllArtists();
+            ViewBag.Artists = artistList.Select(a => new SelectListItem
+            {
+                Value = a.Id.ToString(),
+                Text = a.Name
+            }).ToList();
 
-            return RedirectToAction("Index", "Albums");
+            // Return to the creation view if there are errors
+            ViewBag.AlbumId = albumId;
+            return View();
         }
+
+
+
+
+
 
 
 
@@ -146,7 +189,16 @@ namespace MusicStore.Web.Controllers
             Debug.WriteLine("Received Selected Artist IDs: " + selectedArtistIds);
 
             // Convert selectedArtistIds to a list of GUIDs with improved error handling
-            var artistIds = selectedArtistIds.Split(',')
+
+                var artistIds = new List<Guid>();
+
+            if (string.IsNullOrEmpty(selectedArtistIds) || selectedArtistIds == "0")
+            {
+              
+            }
+            else
+            {
+                artistIds = selectedArtistIds.Split(',')
                                              .Select(id => id.Trim())
                                              .Where(id => !string.IsNullOrEmpty(id))
                                              .Select(id =>
@@ -161,7 +213,7 @@ namespace MusicStore.Web.Controllers
                                              })
                                              .Where(guid => guid != Guid.Empty)
                                              .ToList();
-
+            }
 
             // Log the parsed artist IDs
             Debug.WriteLine("Parsed Artist IDs: " + string.Join(", ", artistIds));
@@ -178,6 +230,7 @@ namespace MusicStore.Web.Controllers
             existingTrack.Duration = track.Duration;
             existingTrack.YoutubeURL = track.YoutubeURL;
             existingTrack.ListenCount = track.ListenCount;
+            existingTrack.DateAdded = DateTime.Now;
 
             // Fetch the selected artists
             var artists = _artistRepository.GetArtistsByIds(artistIds);
@@ -189,6 +242,28 @@ namespace MusicStore.Web.Controllers
             // Redirect to the index or another view
             return RedirectToAction("Index", "Albums");
 
+        }
+
+
+
+
+
+        //MISCLELLANIOUS METHODS
+        [HttpPost]
+        public IActionResult Play(Guid id)
+        {
+            var track = _trackService.GetTrackById(id);
+            if (track == null)
+            {
+                return NotFound();
+            }
+
+            // Increment the listen count
+            track.ListenCount++;
+            _trackService.UpdateTrack(track);
+
+            // Return a response (can be empty if no specific response is needed)
+            return Ok();
         }
 
 

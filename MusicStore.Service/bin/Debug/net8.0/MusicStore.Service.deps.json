@@ -590,7 +590,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
         },
         "runtime": {
-          "MusicStore.Domain.dll": {}
+          "MusicStore.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "MusicStore.Repository/1.0.0": {
@@ -602,7 +605,10 @@
           "MusicStore.Domain": "1.0.0"
         },
         "runtime": {
-          "MusicStore.Repository.dll": {}
+          "MusicStore.Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
