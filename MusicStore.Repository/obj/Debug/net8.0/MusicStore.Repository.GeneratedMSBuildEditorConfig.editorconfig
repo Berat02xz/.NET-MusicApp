@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicStore.Repository
-build_property.ProjectDir = C:\Users\berat\OneDrive\Documents\Github\MusicApp\MusicStore.Repository\
+build_property.ProjectDir = C:\Users\dranzeR\Source\Repos\MusicApp\MusicStore.Repository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
