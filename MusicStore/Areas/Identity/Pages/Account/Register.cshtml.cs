@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using MusicStore.Domain.Identity;
+using MusicStore.Domain.Models;
 
 namespace MusicStore.Web.Areas.Identity.Pages.Account
 {
@@ -101,6 +102,9 @@ namespace MusicStore.Web.Areas.Identity.Pages.Account
                     LastName = Input.LastName,
                     UserAddress = Input.UserAddress,
                     // Any other properties from MusicStoreUser
+                    //Playlist
+                    Playlists = new List<Playlist>(),
+
                 };
 
                 // Set username and email

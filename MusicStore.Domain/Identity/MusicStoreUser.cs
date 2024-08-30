@@ -9,8 +9,9 @@ namespace MusicStore.Domain.Identity
         public required string LastName { get; set; }
         public required string UserAddress { get; set; }
 
-        // FUTURE IMPLEMENTATION FOR PLAYLISTS
-        //  public List<Playlist> Playlists { get; set; } = new List<Playlist>();
+        // Playlist Implementation (For each registered user theres a playlist)
+        public List<Playlist> Playlists { get; set; } = new List<Playlist>();
+
 
     }
 }

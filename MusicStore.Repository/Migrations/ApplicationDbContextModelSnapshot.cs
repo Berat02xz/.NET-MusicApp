@@ -372,6 +372,37 @@ namespace MusicStore.Repository.Migrations
                     b.ToTable("Artists");
                 });
 
+            modelBuilder.Entity("MusicStore.Domain.Models.Playlist", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MusicStoreUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UrlPicture")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MusicStoreUserId");
+
+                    b.ToTable("Playlists");
+                });
+
             modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
                 {
                     b.Property<Guid>("Id")
@@ -391,6 +422,9 @@ namespace MusicStore.Repository.Migrations
                     b.Property<int>("ListenCount")
                         .HasColumnType("int");
 
+                    b.Property<Guid?>("PlaylistId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -401,6 +435,8 @@ namespace MusicStore.Repository.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AlbumId");
+
+                    b.HasIndex("PlaylistId");
 
                     b.ToTable("Tracks");
                 });
@@ -524,6 +560,13 @@ namespace MusicStore.Repository.Migrations
                     b.Navigation("Track");
                 });
 
+            modelBuilder.Entity("MusicStore.Domain.Models.Playlist", b =>
+                {
+                    b.HasOne("MusicStore.Domain.Identity.MusicStoreUser", null)
+                        .WithMany("Playlists")
+                        .HasForeignKey("MusicStoreUserId");
+                });
+
             modelBuilder.Entity("MusicStore.Domain.Models.Track", b =>
                 {
                     b.HasOne("MusicStore.Domain.Models.Album", "Album")
@@ -532,12 +575,26 @@ namespace MusicStore.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("MusicStore.Domain.Models.Playlist", null)
+                        .WithMany("PlaylistTracks")
+                        .HasForeignKey("PlaylistId");
+
                     b.Navigation("Album");
+                });
+
+            modelBuilder.Entity("MusicStore.Domain.Identity.MusicStoreUser", b =>
+                {
+                    b.Navigation("Playlists");
                 });
 
             modelBuilder.Entity("MusicStore.Domain.Models.Album", b =>
                 {
                     b.Navigation("Tracks");
+                });
+
+            modelBuilder.Entity("MusicStore.Domain.Models.Playlist", b =>
+                {
+                    b.Navigation("PlaylistTracks");
                 });
 #pragma warning restore 612, 618
         }

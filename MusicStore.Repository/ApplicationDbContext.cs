@@ -18,6 +18,7 @@ namespace MusicStore.Repository
         public DbSet<Album> Albums { get; set; }
         public DbSet<AlbumArtist> AlbumArtists { get; set; }
         public DbSet<ArtistTrack> ArtistTracks { get; set; }
+        public DbSet<Playlist> Playlists { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

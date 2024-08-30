@@ -8685,19 +8685,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dranzeR\\.nuget\\packages\\": {}
+    "C:\\Users\\berat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
       "projectName": "MusicStore.Web",
-      "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
-      "packagesPath": "C:\\Users\\dranzeR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore\\obj\\",
+      "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
+      "packagesPath": "C:\\Users\\berat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dranzeR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\berat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8712,14 +8712,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj"
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj"
             },
-            "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj": {
-              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj"
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj"
             },
-            "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore.Service\\MusicStore.Service.csproj": {
-              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicApp\\MusicStore.Service\\MusicStore.Service.csproj"
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\MusicStore.Service.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\MusicStore.Service.csproj"
             }
           }
         }

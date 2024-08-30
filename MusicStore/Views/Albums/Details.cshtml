@@ -14,10 +14,23 @@
         transition: transform 0.3s, color 0.3s;
     }
 
-        .play-button:hover {
+    .play-button:hover {
             transform: scale(1.2);
             color: #0056b3; /* Adjust color on hover as needed */
-        }
+    }
+
+    .fa-solid{
+        font-size: 24px;
+        color: #000000; /* Adjust color as needed */
+        cursor: pointer;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    .fa-solid:hover{
+            transform: scale(1.2);
+            color: #0056b3; /* Adjust color on hover as needed */
+    }
+
 </style>
 
 
@@ -86,9 +99,8 @@
                     <th>Title</th>
                     <th>Duration</th>
                     <th>Listen Count</th>
-                    <th>YouTube URL</th>
-                    <th>Date Added</th>
                     <th>Artists</th>
+                    <th>Playlist</th>
                     <th>Actions</th> <!-- Add an Actions column -->
                 </tr>
             </thead>
@@ -97,27 +109,18 @@
                 {
                     <tr>
                         <td>
+                            <a href="@track.YoutubeURL">
                             <!-- Play Button Symbol using Font Awesome -->
                             <i class="fa-solid fa-play play-button"
                                data-id="@track.Id"
                                data-url="@Url.Action("Play", "Tracks")"
                                onclick="playTrack($(this).data('id'), $(this).data('url'))">
                             </i>
+                            </a>
                         </td>
                         <td>@track.Title</td>
                         <td>@track.Duration</td>
                         <td>@track.ListenCount</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(track.YoutubeURL))
-                            {
-                                <a href="@track.YoutubeURL" target="_blank">Watch</a>
-                            }
-                            else
-                            {
-                                <p>No URL</p>
-                            }
-                        </td>
-                        <td>@track.DateAdded.ToShortDateString()</td>
                         <td>
                             @if (track.Artists != null && track.Artists.Any())
                             {
@@ -132,6 +135,12 @@
                             {
                                 <p>No artists</p>
                             }
+                        </td>
+                        <td>
+                            <!-- Add To Playlist -->
+                            <a href="#" class="add-to-playlist" data-track-id="@track.Id">
+                                <i class="fa-solid fa-circle-plus"></i>
+                            </a>
                         </td>
                         <td>
                             <!-- Edit Button -->
@@ -173,4 +182,27 @@
             });
         }
     </script>
+    <script>
+        $(document).on('click', '.add-to-playlist', function () {
+            var button = $(this); // Reference to the clicked button
+            var trackId = button.data('track-id'); // Retrieve the track ID from the data attribute
+
+            $.ajax({
+                url: '@Url.Action("AddTrackToPlaylist", "Playlists")', // URL to send the AJAX request to (specify the controller name)
+                type: 'POST', // HTTP method
+                data: {
+                    trackId: trackId // Send the track ID
+                },
+                success: function (result) {
+                    // Handle successful response
+                    alert('Track added to playlist!');
+                },
+                error: function (xhr, status, error) {
+                    // Handle errors
+                    alert('An error occurred: ' + xhr.responseText);
+                }
+            });
+        });
+    </script>
+
 }

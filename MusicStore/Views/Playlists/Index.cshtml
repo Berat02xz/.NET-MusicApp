@@ -1,0 +1,115 @@
+﻿@model MusicStore.Domain.Models.Playlist
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<style>
+    .playlist-header {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .playlist-cover {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .playlist-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .track-list {
+        margin-top: 30px;
+    }
+
+    .track-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+        .track-item:last-child {
+            border-bottom: none;
+        }
+
+    .track-title {
+        font-size: 1.1rem;
+    }
+
+    .track-duration {
+        color: #888;
+    }
+
+    .checkout-button {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-checkout {
+        background-color: #f39c12;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-checkout:hover {
+            background-color: #e67e22;
+        }
+</style>
+
+<div class="container">
+
+    <!-- Playlist Header -->
+    <div class="playlist-header">
+        <div class="playlist-details">
+            <img src="@Model.UrlPicture" alt="Playlist Cover" class="playlist-cover" />
+            <h1>@Model.Name</h1>
+            <p>@Model.Description</p>
+            <p><strong>Created on:</strong> @Model.CreatedAt.ToString("MMMM dd, yyyy")</p>
+        </div>
+    </div>
+
+    <!-- Track List -->
+    <div class="track-list">
+        @if (Model.PlaylistTracks != null && Model.PlaylistTracks.Any())
+        {
+            @foreach (var track in Model.PlaylistTracks)
+            {
+                <div class="track-item">
+                    <div>
+                        <a style="text-decoration:none;" href="@track.YoutubeURL" target="_blank"><i class="fa-solid fa-play"></i> <span class="track-title">@track.Title</span></a>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                        <span class="track-duration">@track.ListenCount</span> <i class="fa-solid fa-headphones"></i>
+                    </div>
+
+                    <div>
+                        <span class="track-duration">@track.Duration</span> <i class="fa-regular fa-clock"></i>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No tracks in this playlist.</p>
+        }
+    </div>
+
+    <!-- Checkout Button -->
+    <div class="checkout-button">
+        <button class="btn-checkout" onclick="location.href='@Url.Action("Checkout", "Playlist", new { id = Model.Id })'">Checkout</button>
+    </div>
+
+</div>
