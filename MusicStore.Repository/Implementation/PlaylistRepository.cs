@@ -40,7 +40,8 @@ namespace MusicStore.Repository.Implementation
         public Playlist GetPlaylistById(Guid playlistId)
         {
             return _context.Playlists.Include(p => p.PlaylistTracks)
-                                      .ThenInclude(pt => pt.Artists)
+                                      .ThenInclude(pt => pt.Album)
+                                      .ThenInclude(pt => pt.Title)
                                       .FirstOrDefault(p => p.Id == playlistId);
         }
 
@@ -53,6 +54,7 @@ namespace MusicStore.Repository.Implementation
             var user = _context.Users
                 .Include(u => u.Playlists)
                 .ThenInclude(p => p.PlaylistTracks)
+                .ThenInclude(p => p.Album)
                 .FirstOrDefault(u => u.Id == userId);
 
             // Check if the user exists
