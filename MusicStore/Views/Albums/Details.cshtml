@@ -8,6 +8,7 @@
 
 <style>
     .play-button {
+        padding-right:10px;
         font-size: 24px;
         color: #000000; /* Adjust color as needed */
         cursor: pointer;
@@ -19,89 +20,68 @@
             color: #0056b3; /* Adjust color on hover as needed */
     }
 
-    .fa-solid{
+    .fa-play, fa-heart  {
         font-size: 24px;
         color: #000000; /* Adjust color as needed */
         cursor: pointer;
         transition: transform 0.3s, color 0.3s;
     }
 
-    .fa-solid:hover{
+    .fa-play:hover, fa-heart:hover {
             transform: scale(1.2);
             color: #0056b3; /* Adjust color on hover as needed */
     }
 
+    .custom-table td, .custom-table th {
+        padding: 2.5rem; /* Adjust padding as needed */
+    }
+
+    .custom-table tbody tr:hover {
+        background-color: #f8f9fa; /* Optional: hover effect */
+    }
 </style>
 
 
-<h1>Details</h1>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Album Cover Image -->
+        <div class="col-md-4 text-center">
+            <img src="@album.CoverImageUrl" alt="Cover Image" class="img-fluid rounded album-cover" />
+        </div>
+
+        <!-- Album Information -->
+        <div class="col-md-8">
+            <h1 class="mb-3">@album.Title</h1>
+            <p class="text-muted">@album.ReleaseDate.ToShortDateString()</p>
+            <p>@album.Description</p>
+
+            <!-- Add, Edit and Delete Actions -->
+            <div class="mt-4">
+                <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></a>
+                <a href="@Url.Action("Edit", new { id = album.Id })" class="btn btn-outline-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                <form asp-action="Delete" method="post" class="d-inline">
+                    <input type="hidden" name="id" value="@album.Id" />
+                    <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 
 <div>
-    <h4>Album</h4>
-    <hr />
-    @if (album == null)
-    {
-        <p>Album not found.</p>
-    }
-    else
-    {
-        <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => album.Title)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => album.Title)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => album.CoverImageUrl)
-            </dt>
-            <dd class="col-sm-10">
-                <img src="@album.CoverImageUrl" alt="Cover Image" width="100" />
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => album.Description)
-            </dt>
-            <dd class="col-sm-10">
-                @album.Description
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => album.ReleaseDate)
-            </dt>
-            <dd class="col-sm-10">
-                @album.ReleaseDate.ToShortDateString()
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => album.Tags)
-            </dt>
-            <dd class="col-sm-10">
-                @album.Tags
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => album.Type)
-            </dt>
-            <dd class="col-sm-10">
-                @album.Type
-            </dd>
-        </dl>
-    }
-</div>
-
-<div>
-    <h4>Tracks</h4>
-    <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id" class="btn btn-primary">Add Track</a>
     <hr />
     @if (tracks.Any())
     {
-        <table class="table">
+            <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Play</th>
-                    <th>Title</th>
-                    <th>Duration</th>
-                    <th>Listen Count</th>
-                    <th>Artists</th>
-                    <th>Playlist</th>
-                    <th>Actions</th> <!-- Add an Actions column -->
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th> <!-- Add an Actions column -->
                 </tr>
             </thead>
             <tbody>
@@ -109,37 +89,37 @@
                 {
                     <tr>
                         <td>
-                            <a href="@track.YoutubeURL">
+                            <a href="@track.YoutubeURL" target="_top" style="text-decoration:none;">
                             <!-- Play Button Symbol using Font Awesome -->
                             <i class="fa-solid fa-play play-button"
                                data-id="@track.Id"
                                data-url="@Url.Action("Play", "Tracks")"
                                onclick="playTrack($(this).data('id'), $(this).data('url'))">
-                            </i>
+                                    </i>  @track.Title
                             </a>
-                        </td>
-                        <td>@track.Title</td>
-                        <td>@track.Duration</td>
-                        <td>@track.ListenCount</td>
+                            </td>
+                            <td>@track.ListenCount <i class="fa-solid fa-headphones"></i></td>
+                            <td>@track.Duration   <i class="fa-regular fa-clock"></i></td>
+                       
                         <td>
                             @if (track.Artists != null && track.Artists.Any())
                             {
-                                <ul>
+                                
                                     @foreach (var artist in track.Artists)
                                     {
-                                        <li>@artist.Name</li>
+                                        <ul>@artist.Name</ul>
                                     }
-                                </ul>
+                                
                             }
                             else
                             {
-                                <p>No artists</p>
+                                <ul>No artists</ul>
                             }
                         </td>
                         <td>
                             <!-- Add To Playlist -->
                             <a href="#" class="add-to-playlist" data-track-id="@track.Id">
-                                <i class="fa-solid fa-circle-plus"></i>
+                                    <i class="fa-regular fa-heart"></i>
                             </a>
                         </td>
                         <td>
@@ -163,10 +143,9 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
 </div>
-
-
+</div>
+</div>
 @section Scripts {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
