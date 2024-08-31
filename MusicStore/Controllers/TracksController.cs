@@ -246,9 +246,25 @@ namespace MusicStore.Web.Controllers
 
 
 
+        //Delete Track
+        [HttpPost]
+        public IActionResult Delete(Guid id)
+        {
+            var track = _trackService.GetTrackById(id);
+            if (track == null)
+            {
+                return NotFound();
+            }
+
+            _trackService.DeleteTrack(track);
+            // Redirect to the index or list action of the relevant controller
+
+            return Ok();
+        }
 
 
-        //MISCLELLANIOUS METHODS
+
+        //Increase Listening Count of a Track
         [HttpPost]
         public IActionResult Play(Guid id)
         {

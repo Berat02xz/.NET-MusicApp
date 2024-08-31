@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\views\\albums\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\albums\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\controllers\\trackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\controllers\\trackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\views\\playlists\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\playlists\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\implementation\\trackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\implementation\\trackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\interface\\itrackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\interface\\itrackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.repository\\implementation\\playlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\implementation\\playlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\interface\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\interface\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.repository\\interface\\iplaylistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\interface\\iplaylistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\implementation\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\implementation\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\views\\artists\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -23,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\views\\albums\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\albums\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.repository\\migrations\\20240831153617_mainmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\migrations\\20240831153617_mainmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.repository\\implementation\\playlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\implementation\\playlistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\interface\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\interface\\iplaylistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\controllers\\playlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\views\\tracks\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -91,14 +115,6 @@
       "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\implementation\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\implementation\\playlistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.repository\\interface\\iplaylistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\interface\\iplaylistrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.service\\interface\\ialbumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F6F58C6-37AE-4CE4-BCD6-B042FAE47B1B}|MusicStore.Service\\MusicStore.Service.csproj|solutionrelative:musicstore.service\\interface\\ialbumservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -134,74 +150,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 312,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Details.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Details.cshtml",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Details.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Albums\\Details.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFYAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Playlists\\Index.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Playlists\\Index.cshtml",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Playlists\\Index.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Playlists\\Index.cshtml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHoAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T08:23:40.079Z",
+              "WhenOpened": "2024-08-31T11:13:02.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
-              "RelativeDocumentMoniker": "MusicStore\\appsettings.json",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
-              "RelativeToolTip": "MusicStore\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-31T15:17:17.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_Layout.cshtml.css",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_Layout.cshtml.css",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Shared\\_Layout.cshtml.css",
-              "RelativeToolTip": "MusicStore\\Views\\Shared\\_Layout.cshtml.css",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-31T09:15:27.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Program.cs",
-              "RelativeDocumentMoniker": "MusicStore\\Program.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Program.cs",
-              "RelativeToolTip": "MusicStore\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "MusicStore.Repository\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "MusicStore.Repository\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:07:57.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T15:18:56.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PlaylistsController.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\PlaylistsController.cs",
-              "RelativeDocumentMoniker": "MusicStore\\Controllers\\PlaylistsController.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\PlaylistsController.cs",
-              "RelativeToolTip": "MusicStore\\Controllers\\PlaylistsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wCMAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:36:42.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -213,33 +191,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Playlists\\Index.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Playlists\\Index.cshtml",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Playlists\\Index.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Playlists\\Index.cshtml",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAMwF4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T11:13:02.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContextFactory.cs",
-              "RelativeDocumentMoniker": "MusicStore.Repository\\ApplicationDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContextFactory.cs",
-              "RelativeToolTip": "MusicStore.Repository\\ApplicationDbContextFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADWAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Program.cs",
+              "RelativeDocumentMoniker": "MusicStore\\Program.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Program.cs",
+              "RelativeToolTip": "MusicStore\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T15:18:56.642Z",
+              "WhenOpened": "2024-08-30T14:07:57.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlaylistsController.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\PlaylistsController.cs",
+              "RelativeDocumentMoniker": "MusicStore\\Controllers\\PlaylistsController.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\PlaylistsController.cs",
+              "RelativeToolTip": "MusicStore\\Controllers\\PlaylistsController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAA9wGcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:36:42.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Details.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Details.cshtml",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Details.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Albums\\Details.cshtml",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAcwMEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T08:23:40.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "20240831153617_MainMigration.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Migrations\\20240831153617_MainMigration.cs",
               "RelativeDocumentMoniker": "MusicStore.Repository\\Migrations\\20240831153617_MainMigration.cs",
@@ -247,12 +237,139 @@
               "RelativeToolTip": "MusicStore.Repository\\Migrations\\20240831153617_MainMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T15:36:17.921Z",
+              "WhenOpened": "2024-08-31T15:36:17.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TracksController.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\TracksController.cs",
+              "RelativeDocumentMoniker": "MusicStore\\Controllers\\TracksController.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\TracksController.cs",
+              "RelativeToolTip": "MusicStore\\Controllers\\TracksController.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAcwAUBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T18:40:29.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 9,
+              "Title": "PlaylistService.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Implementation\\PlaylistService.cs",
+              "RelativeDocumentMoniker": "MusicStore.Service\\Implementation\\PlaylistService.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Implementation\\PlaylistService.cs",
+              "RelativeToolTip": "MusicStore.Service\\Implementation\\PlaylistService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAYwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:42:39.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IPlaylistService.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\IPlaylistService.cs",
+              "RelativeDocumentMoniker": "MusicStore.Service\\Interface\\IPlaylistService.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\IPlaylistService.cs",
+              "RelativeToolTip": "MusicStore.Service\\Interface\\IPlaylistService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAlwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:37:30.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TrackService.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Implementation\\TrackService.cs",
+              "RelativeDocumentMoniker": "MusicStore.Service\\Implementation\\TrackService.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Implementation\\TrackService.cs",
+              "RelativeToolTip": "MusicStore.Service\\Implementation\\TrackService.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwGMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T18:45:17.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ITrackService.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\ITrackService.cs",
+              "RelativeDocumentMoniker": "MusicStore.Service\\Interface\\ITrackService.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\ITrackService.cs",
+              "RelativeToolTip": "MusicStore.Service\\Interface\\ITrackService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAArwA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T18:44:56.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlaylistRepository.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
+              "RelativeDocumentMoniker": "MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
+              "RelativeToolTip": "MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:44:13.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPlaylistRepository.cs",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
+              "RelativeDocumentMoniker": "MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
+              "RelativeToolTip": "MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T14:43:54.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "MusicStore\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-31T09:15:27.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
+              "RelativeDocumentMoniker": "MusicStore\\appsettings.json",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
+              "RelativeToolTip": "MusicStore\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-31T15:17:17.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Artists\\Create.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Create.cshtml",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Artists\\Create.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Artists\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-31T18:11:21.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_Layout.cshtml",
@@ -264,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MusicStore.Repository\\ApplicationDbContext.cs",
@@ -272,36 +389,11 @@
               "RelativeToolTip": "MusicStore.Repository\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:07:27.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:07:27.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IPlaylistRepository.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
-              "RelativeDocumentMoniker": "MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
-              "RelativeToolTip": "MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:43:54.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlaylistRepository.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
-              "RelativeDocumentMoniker": "MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
-              "RelativeToolTip": "MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAcwEgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:44:13.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "MusicStore\\wwwroot\\css\\site.css",
@@ -313,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Tracks\\Edit.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Tracks\\Edit.cshtml",
@@ -325,19 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IPlaylistService.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\IPlaylistService.cs",
-              "RelativeDocumentMoniker": "MusicStore.Service\\Interface\\IPlaylistService.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\IPlaylistService.cs",
-              "RelativeToolTip": "MusicStore.Service\\Interface\\IPlaylistService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAlwB8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:37:30.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Tracks\\Create.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Tracks\\Create.cshtml",
@@ -349,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Create.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Create.cshtml",
@@ -361,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Edit.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Edit.cshtml",
@@ -373,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "MusicStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -385,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "20240830145040_playlist1.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\Migrations\\20240830145040_playlist1.cs",
               "RelativeDocumentMoniker": "MusicStore.Repository\\Migrations\\20240830145040_playlist1.cs",
@@ -397,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Home\\Index.cshtml",
@@ -409,19 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PlaylistService.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Implementation\\PlaylistService.cs",
-              "RelativeDocumentMoniker": "MusicStore.Service\\Implementation\\PlaylistService.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Implementation\\PlaylistService.cs",
-              "RelativeToolTip": "MusicStore.Service\\Implementation\\PlaylistService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:42:39.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "MusicStoreUser.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\Identity\\MusicStoreUser.cs",
               "RelativeDocumentMoniker": "MusicStore.Domain\\Identity\\MusicStoreUser.cs",
@@ -433,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "IAlbumService.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\IAlbumService.cs",
               "RelativeDocumentMoniker": "MusicStore.Service\\Interface\\IAlbumService.cs",
@@ -445,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "IArtistService.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Service\\Interface\\IArtistService.cs",
               "RelativeDocumentMoniker": "MusicStore.Service\\Interface\\IArtistService.cs",
@@ -457,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Playlist\\Index.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Playlist\\Index.cshtml",
@@ -469,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MusicStore\\Controllers\\HomeController.cs",
@@ -481,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Albums\\Index.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Index.cshtml",
@@ -493,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "Playlist.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\Models\\Playlist.cs",
               "RelativeDocumentMoniker": "MusicStore.Domain\\Models\\Playlist.cs",
@@ -505,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_LoginPartial.cshtml",

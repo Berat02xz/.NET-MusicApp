@@ -13,7 +13,7 @@ namespace MusicStore.Service.Interface
         Track GetTrackById(Guid id);
         void AddTrack(Track track);
         void UpdateTrack(Track track);
-        void DeleteTrack(Guid id);
+        void DeleteTrack(Track track);
         List<Track> GetTracksByArtistId(Guid artistId);
 
         // New methods for managing TrackArtist relationships

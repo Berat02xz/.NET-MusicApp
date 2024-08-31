@@ -41,7 +41,6 @@ namespace MusicStore.Repository.Implementation
         {
             return _context.Playlists.Include(p => p.PlaylistTracks)
                                       .ThenInclude(pt => pt.Album)
-                                      .ThenInclude(pt => pt.Title)
                                       .FirstOrDefault(p => p.Id == playlistId);
         }
 

@@ -79,22 +79,28 @@ namespace MusicStore.Service.Implementation
             }
         }
 
-        public void DeleteTrack(Guid id)
+        public void DeleteTrack(Track track)
         {
-            var track = _context.Tracks.FirstOrDefault(t => t.Id == id);
-            if (track != null)
+
+            // Retrieve the track from the database using the ID from the provided Track object
+            var existingTrack = _context.Tracks.FirstOrDefault(t => t.Id == track.Id);
+            if (existingTrack != null)
             {
-                var artistTracks = _context.ArtistTracks.Where(at => at.TrackId == id).ToList();
+                // Remove related artist-track entries
+                var artistTracks = _context.ArtistTracks.Where(at => at.TrackId == track.Id).ToList();
                 if (artistTracks.Any())
                 {
                     _context.ArtistTracks.RemoveRange(artistTracks);
                 }
 
-                _context.Tracks.Remove(track);
+                // Remove the track
+                _context.Tracks.Remove(existingTrack);
 
+                // Save changes to the database
                 _context.SaveChanges();
             }
         }
+
 
 
         public List<Track> GetTracksByArtistId(Guid artistId)

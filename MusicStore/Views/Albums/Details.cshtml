@@ -131,12 +131,14 @@
                         </td>
                         <td>
                             <!-- Edit Button -->
-                            <a href="@Url.Action("Edit", "Tracks", new { id = track.Id })" class="btn btn-primary btn-sm">Edit</a>
-                            <!-- Delete Button -->
-                            <form asp-action="Delete" method="post" style="display:inline;" asp-controller="Tracks">
-                                <input type="hidden" name="id" value="@track.Id" />
-                                <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
-                            </form>
+                                <a href="@Url.Action("Edit", "Tracks", new { id = track.Id })" class="btn btn-outline-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <!-- Delete Button -->
+                                <a href="#"
+                                   class="btn btn-outline-danger btn-sm delete-track"
+                                   data-id="@track.Id"
+                                   title="Delete Track">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
                         </td>
                     </tr>
                 }
@@ -190,5 +192,25 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.delete-track').click(function (event) {
+                event.preventDefault(); // Prevent the default anchor action
 
+                var trackId = $(this).data('id'); // Get the track ID from data attribute
+
+                $.ajax({
+                    url: '/Tracks/Delete', // Adjust the URL if necessary
+                    type: 'POST',
+                    data: { id: trackId },
+                    success: function (response) {
+                        location.reload(); // Refresh the page after successful deletion
+                    },
+                    error: function () {
+                        alert('Error deleting track.'); // Optional: notify user if there's an error
+                    }
+                });
+            });
+        });
+    </script>
 }

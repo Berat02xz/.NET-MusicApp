@@ -96,17 +96,36 @@ namespace MusicStore.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult RemoveTrack(Guid playlistId, Guid trackId)
         {
+            Debug.WriteLine($"RemoveTrack called with PlaylistId: {playlistId} and TrackId: {trackId}");
+
             var playlist = _playlistService.GetPlaylistById(playlistId);
             if (playlist == null)
             {
+                Debug.WriteLine("No playlist found from method GetOnlyPlaylistById");
                 return NotFound();
             }
 
+            Debug.WriteLine($"Playlist found: {playlist.Id} with {playlist.PlaylistTracks.Count} tracks.");
+
             var track = playlist.PlaylistTracks.FirstOrDefault(t => t.Id == trackId);
-            if (track != null)
+            if (track == null)
             {
-                playlist.PlaylistTracks.Remove(track);
+                Debug.WriteLine($"Track with Id {trackId} not found in playlist.");
+                return NotFound(); // Optionally handle the case where the track is not found
+            }
+
+            Debug.WriteLine($"Track found: {track.Id}. Removing track from playlist.");
+            playlist.PlaylistTracks.Remove(track);
+
+            try
+            {
                 _playlistService.UpdatePlaylist(playlist); // Update the playlist after removing the track
+                Debug.WriteLine("Playlist updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception during playlist update: {ex.Message}");
+                return StatusCode(500, "Internal server error");
             }
 
             return RedirectToAction(nameof(Index), new { playlistId = playlistId });

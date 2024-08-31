@@ -118,9 +118,9 @@
                                 <td>@track.ListenCount <i class="fa-solid fa-headphones"></i></td>
                                 <td>@track.Duration <i class="fa-regular fa-clock"></i></td>
                             <td>
-                                <form asp-action="RemoveTrack" method="post" class="d-inline">
-                                    <input type="hidden" name="track_id" value="@track.Id" />
-                                    <input type="hidden" name="playlist_id" value="@Model.Id" />
+                                <form asp-action="RemoveTrack" asp-controller="Playlists" method="post" class="d-inline">
+                                    <input type="hidden" name="trackId" value="@track.Id" />
+                                    <input type="hidden" name="playlistId" value="@Model.Id" />
                                     <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                             </td>

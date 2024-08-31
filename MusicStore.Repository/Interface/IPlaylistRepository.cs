@@ -11,5 +11,6 @@ namespace MusicStore.Repository.Interface
         void UpdatePlaylist(Playlist playlist);
         void DeletePlaylist(Playlist playlist);
         Playlist GetPlaylistByUserId(string userId);
+
     }
 }

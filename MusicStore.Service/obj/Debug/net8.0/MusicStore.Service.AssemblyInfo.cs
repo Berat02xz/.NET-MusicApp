@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicStore.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e686d17a4df7cf423a220648badb322ea799f1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+419f8dbeba3c21a88a5dc161f7d32534a408c909")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicStore.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicStore.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
