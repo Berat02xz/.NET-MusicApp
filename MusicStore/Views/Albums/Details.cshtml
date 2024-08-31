@@ -52,8 +52,9 @@
         <!-- Album Information -->
         <div class="col-md-8">
             <h1 class="mb-3">@album.Title</h1>
-            <p class="text-muted">@album.ReleaseDate.ToShortDateString()</p>
-            <p>@album.Description</p>
+            <p class="text-muted">@album.Type ‧ @album.ReleaseDate.ToShortDateString() ‧ @album.Tracks.Count() songs </p>
+            
+
 
             <!-- Add, Edit and Delete Actions -->
             <div class="mt-4">
