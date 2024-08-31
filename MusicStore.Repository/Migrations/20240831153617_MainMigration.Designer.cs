@@ -12,8 +12,8 @@ using MusicStore.Repository;
 namespace MusicStore.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240830145601_Migration1")]
-    partial class Migration1
+    [Migration("20240831153617_MainMigration")]
+    partial class MainMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

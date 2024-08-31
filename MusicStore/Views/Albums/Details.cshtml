@@ -39,6 +39,11 @@
     .custom-table tbody tr:hover {
         background-color: #f8f9fa; /* Optional: hover effect */
     }
+
+    .album-cover {
+        width: 300px; /* Adjust the width as needed */
+        height: auto;
+    }
 </style>
 
 
@@ -90,13 +95,14 @@
                 {
                     <tr>
                         <td>
-                            <a href="@track.YoutubeURL" target="_top" style="text-decoration:none;">
+                            
                             <!-- Play Button Symbol using Font Awesome -->
                             <i class="fa-solid fa-play play-button"
                                data-id="@track.Id"
                                data-url="@Url.Action("Play", "Tracks")"
                                onclick="playTrack($(this).data('id'), $(this).data('url'))">
-                                    </i>  @track.Title
+                                </i> <a href="@track.YoutubeURL" target="_top" style="text-decoration:none;">
+                                    @track.Title
                             </a>
                             </td>
                             <td>@track.ListenCount <i class="fa-solid fa-headphones"></i></td>
