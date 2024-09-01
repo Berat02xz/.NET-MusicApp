@@ -44,6 +44,50 @@
         width: 300px; /* Adjust the width as needed */
         height: auto;
     }
+
+    .artist-card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .artist-image {
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px;
+        border: 1px solid #007bff;
+        border-radius: 20px;
+        color: #007bff;
+        font-size: 0.275rem;
+        white-space: nowrap;
+    }
+
+        .tag:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+    .btn-custom {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
 </style>
 
 
@@ -58,8 +102,14 @@
         <div class="col-md-8">
             <h1 class="mb-3">@album.Title</h1>
             <p class="text-muted">@album.Type ‧ @album.ReleaseDate.ToShortDateString() ‧ @album.Tracks.Count() songs </p>
-            
 
+            <!-- Artist Information Album -->
+
+                @foreach (var artist in album.Artists)
+                {
+                    <a class="text-muted" href="/Artists/Details/@artist.Id" style="text-decoration:none;">  <img src="@artist.ImageAvatarURL" alt="Artist Image" class="artist-image img-fluid" />  @artist.Name</a>
+                    <br />
+                }
 
             <!-- Add, Edit and Delete Actions -->
             <div class="mt-4">
@@ -114,7 +164,7 @@
                                 
                                     @foreach (var artist in track.Artists)
                                     {
-                                        <ul>@artist.Name</ul>
+                                        <a href="/Artists/Details/@artist.Id" style="text-decoration:none;">@artist.Name</a>
                                     }
                                 
                             }
@@ -151,10 +201,18 @@
     }
 </div>
 
-<div>
+    <!-- Back to List Button -->
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Back to List
+        </a>
+    </div>
+</div>
+
 </div>
 </div>
-</div>
+
+
 @section Scripts {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>

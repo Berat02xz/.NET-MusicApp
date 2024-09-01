@@ -1,6 +1,9 @@
 ﻿@model MusicStore.Domain.Models.Playlist
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
+@{
+    var pricePerTrack = 5.00; // Price per track
+    var totalPrice = Model.PlaylistTracks.Count() * pricePerTrack;
+}
 <style>
     
 
@@ -68,7 +71,7 @@
         <div class="row">
             <!-- Album Cover Image -->
             <div class="col-md-4 text-center">
-                <img src="@Model.UrlPicture" alt="Cover Image" class="img-fluid rounded album-cover" />
+                <img src="https://static.wixstatic.com/media/b37440_742a0cfac3d0452bb07157db4d044334~mv2.png/v1/fill/w_280,h_280,al_c,lg_1,q_85,enc_auto/b37440_742a0cfac3d0452bb07157db4d044334~mv2.png" alt="Cover Image" class="img-fluid rounded album-cover" />
             </div>
 
 
@@ -80,13 +83,17 @@
 
 
                 <!-- Edit Playlist Information-->
+                <!--
                 <div class="mt-4">
                     <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-outline-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
+                -->
+                
                 <!-- Checkout Button -->
                 <div class="checkout-button">
-                    <button class="btn-checkout" onclick="location.href='@Url.Action("Checkout", "Playlist", new { id = Model.Id })'">Checkout</button>
+                    <button class="btn-checkout" onclick="location.href='@Url.Action("Checkout", "Playlist", new { id = Model.Id })'">Checkout - $@totalPrice.00</button>
                 </div>
+
             </div>
         </div>
      </div>
@@ -98,6 +105,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -117,6 +125,9 @@
                             <td><a href="/Albums/Details/@track.Album.Id" style="text-decoration:none;">@track.Album.Title </a></td>
                                 <td>@track.ListenCount <i class="fa-solid fa-headphones"></i></td>
                                 <td>@track.Duration <i class="fa-regular fa-clock"></i></td>
+                            <td>
+                                <span class="badge bg-primary rounded-pill">$5.00</span>
+                            </td>
                             <td>
                                 <form asp-action="RemoveTrack" asp-controller="Playlists" method="post" class="d-inline">
                                     <input type="hidden" name="trackId" value="@track.Id" />

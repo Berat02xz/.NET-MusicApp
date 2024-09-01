@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MusicStore.Domain.Identity;
 using MusicStore.Service.Interface;
+using Stripe;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -133,6 +134,7 @@ namespace MusicStore.Web.Controllers
 
         // GET: Playlist/Checkout
         // Display the checkout page
+        [HttpGet("Playlist/Checkout/{playlistId}")]
         public IActionResult Checkout(Guid playlistId)
         {
             var playlist = _playlistService.GetPlaylistById(playlistId);
@@ -141,11 +143,35 @@ namespace MusicStore.Web.Controllers
                 return NotFound();
             }
 
-            // Logic for handling the checkout process goes here
-            // For example, creating an order from the playlist tracks
+            // Count the tracks, each track costs $5, calculate the total price
+            var totalPrice = playlist.PlaylistTracks.Count * 5.00m;
 
-            // Redirect to a confirmation page or return the checkout view
-            return View(playlist);
+            // Convert the totalPrice to the smallest currency unit (cents)
+            var amountInCents = (long)(totalPrice * 100);
+
+            //Stripe implementation
+            StripeConfiguration.ApiKey = "sk_test_51PuCUm04G4ZgsfVlqzAnyo2YZQAPKFTJJK2ri6zCXCAL83euQcbikiGd14VQZyVuuQyfiI4ehtS7npe8HjTqsl4M00BK1rCMy6";
+
+            var options = new PaymentIntentCreateOptions
+            {
+                Amount = amountInCents,
+                Currency = "usd",
+                PaymentMethodTypes = new List<string> { "card" },
+            };
+            var service = new PaymentIntentService();
+            var paymentIntent = service.Create(options);
+
+            ViewBag.PublishableKey = "pk_test_51PuCUm04G4ZgsfVlQ96Lvgk4dAeXYU85sbIReyRgil9sVlBdn2irTgfVFVjf6ruS1L5bOcqe2kPUDD4KIF8BExnE006oTpBWAj";
+            ViewBag.ClientSecret = paymentIntent.ClientSecret;
+
+            //Put playlist and price in viewbag aswell
+            ViewBag.Playlist = playlist;
+            ViewBag.TotalPrice = totalPrice;
+
+            return View();
         }
+
+
+
     }
 }

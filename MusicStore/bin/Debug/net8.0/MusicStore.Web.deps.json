@@ -18,7 +18,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.4",
           "MusicStore.Domain": "1.0.0",
           "MusicStore.Repository": "1.0.0",
-          "MusicStore.Service": "1.0.0"
+          "MusicStore.Service": "1.0.0",
+          "Stripe.net": "45.10.0"
         },
         "runtime": {
           "MusicStore.Web.dll": {}
@@ -1875,6 +1876,18 @@
           }
         }
       },
+      "Stripe.net/45.10.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "System.Configuration.ConfigurationManager": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "assemblyVersion": "45.10.0.0",
+            "fileVersion": "45.10.0.0"
+          }
+        }
+      },
       "System.CodeDom/5.0.0": {
         "runtime": {
           "lib/netstandard2.0/System.CodeDom.dll": {
@@ -2149,7 +2162,8 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.7",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore": "8.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "Stripe.net": "45.10.0"
         },
         "runtime": {
           "MusicStore.Domain.dll": {
@@ -2164,7 +2178,8 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
-          "MusicStore.Domain": "1.0.0"
+          "MusicStore.Domain": "1.0.0",
+          "Stripe.net": "45.10.0"
         },
         "runtime": {
           "MusicStore.Repository.dll": {
@@ -2180,7 +2195,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
           "MusicStore.Domain": "1.0.0",
-          "MusicStore.Repository": "1.0.0"
+          "MusicStore.Repository": "1.0.0",
+          "Stripe.net": "45.10.0"
         },
         "runtime": {
           "MusicStore.Service.dll": {
@@ -3148,6 +3164,13 @@
       "sha512": "sha512-PQ2Oq3yepLY4P7ll145P3xtx2bX8xF4PzaKPRpw9jZlKvfe4LE/saAV82inND9usn1XRpmxXk7Lal3MTI+6CNg==",
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.6",
       "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512"
+    },
+    "Stripe.net/45.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RN549YW4Cknla28/Q680QBPfkX2W2HoNPlMLbaAtX36r9kJZxgSkIS9cIwI+DFPR8T3FSE/JTTCAv5oHcuQe6w==",
+      "path": "stripe.net/45.10.0",
+      "hashPath": "stripe.net.45.10.0.nupkg.sha512"
     },
     "System.CodeDom/5.0.0": {
       "type": "package",

@@ -877,3 +877,4 @@ C:\Users\dranzeR\Source\Repos\MusicApp\MusicStore\obj\Debug\net8.0\refint\MusicS
 C:\Users\dranzeR\Source\Repos\MusicApp\MusicStore\obj\Debug\net8.0\MusicStore.Web.pdb
 C:\Users\dranzeR\Source\Repos\MusicApp\MusicStore\obj\Debug\net8.0\MusicStore.Web.genruntimeconfig.cache
 C:\Users\dranzeR\Source\Repos\MusicApp\MusicStore\obj\Debug\net8.0\ref\MusicStore.Web.dll
+C:\Users\berat\OneDrive\Documents\Github\MusicApp\MusicStore\bin\Debug\net8.0\Stripe.net.dll

@@ -51,8 +51,8 @@ namespace MusicStore.Service.Implementation
             var newPlaylist = new Playlist
             {
                 Name = user.FirstName + " Liked Songs",
-                UrlPicture = "https://www.press2vinyl.co.uk/wp-content/uploads/2024/02/12-inch-coloured-vinyl-record-min-1.jpg",
-                Description = "Your default playlist",
+                UrlPicture = "https://cdn.dribbble.com/users/278624/screenshots/4413242/playlist_cover2.png",
+                Description = "Your personal playlist",
                 CreatedAt = DateTime.Now
             };
 

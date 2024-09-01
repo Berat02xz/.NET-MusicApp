@@ -2378,6 +2378,23 @@
           "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
+      "Stripe.net/45.10.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CodeDom/5.0.0": {
         "type": "package",
         "compile": {
@@ -3099,7 +3116,8 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.7",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore": "8.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "Stripe.net": "45.10.0"
         },
         "compile": {
           "bin/placeholder/MusicStore.Domain.dll": {}
@@ -3116,7 +3134,8 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
-          "MusicStore.Domain": "1.0.0"
+          "MusicStore.Domain": "1.0.0",
+          "Stripe.net": "45.10.0"
         },
         "compile": {
           "bin/placeholder/MusicStore.Repository.dll": {}
@@ -3134,7 +3153,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
           "MusicStore.Domain": "1.0.0",
-          "MusicStore.Repository": "1.0.0"
+          "MusicStore.Repository": "1.0.0",
+          "Stripe.net": "45.10.0"
         },
         "compile": {
           "bin/placeholder/MusicStore.Service.dll": {}
@@ -7271,6 +7291,30 @@
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     },
+    "Stripe.net/45.10.0": {
+      "sha512": "RN549YW4Cknla28/Q680QBPfkX2W2HoNPlMLbaAtX36r9kJZxgSkIS9cIwI+DFPR8T3FSE/JTTCAv5oHcuQe6w==",
+      "type": "package",
+      "path": "stripe.net/45.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.xml",
+        "lib/net5.0/Stripe.net.dll",
+        "lib/net5.0/Stripe.net.xml",
+        "lib/net6.0/Stripe.net.dll",
+        "lib/net6.0/Stripe.net.xml",
+        "lib/netcoreapp3.1/Stripe.net.dll",
+        "lib/netcoreapp3.1/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.45.10.0.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
     "System.CodeDom/5.0.0": {
       "sha512": "JPJArwA1kdj8qDAkY2XGjSWoYnqiM7q/3yRNkt6n28Mnn95MuEGkZXUbPBf7qc3IjwrGY5ttQon7yqHZyQJmOQ==",
       "type": "package",
@@ -8681,7 +8725,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.4",
       "MusicStore.Domain >= 1.0.0",
       "MusicStore.Repository >= 1.0.0",
-      "MusicStore.Service >= 1.0.0"
+      "MusicStore.Service >= 1.0.0",
+      "Stripe.net >= 45.10.0"
     ]
   },
   "packageFolders": {
@@ -8772,6 +8817,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.4, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[45.10.0, )"
           }
         },
         "imports": [
