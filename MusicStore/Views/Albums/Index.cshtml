@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<MusicStore.Domain.Models.Album>
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 <style>
     .album-card {
@@ -63,8 +64,10 @@
 
 <div class="container">
 
-    <p>
-        <a asp-action="Create" class="btn btn-dark">Add Album</a>
+    <p class="text-center">
+        <a asp-action="Create" class="btn btn-outline-dark btn-lg">
+            <i class="fas fa-plus"></i> <strong>Add Album</strong>
+        </a>
     </p>
 
     <div class="row">

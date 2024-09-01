@@ -65,11 +65,10 @@
     .tag {
         display: inline-block;
         padding: 5px 10px;
-        margin: 5px;
         border: 1px solid #007bff;
         border-radius: 20px;
+        font-size: 10px;
         color: #007bff;
-        font-size: 0.275rem;
         white-space: nowrap;
     }
 
@@ -110,6 +109,22 @@
                     <a class="text-muted" href="/Artists/Details/@artist.Id" style="text-decoration:none;">  <img src="@artist.ImageAvatarURL" alt="Artist Image" class="artist-image img-fluid" />  @artist.Name</a>
                     <br />
                 }
+
+                <br />
+            <!-- Album Tags -->
+                @if (!string.IsNullOrEmpty(album.Tags))
+                {
+                    var tags = album.Tags.Split(';');
+                    foreach (var tag in tags)
+                    {
+                        <span class="tag">@tag.Trim()</span>
+                    }
+                }
+                else
+                {
+                    <span class="text-muted">No genres available</span>
+                }
+
 
             <!-- Add, Edit and Delete Actions -->
             <div class="mt-4">
