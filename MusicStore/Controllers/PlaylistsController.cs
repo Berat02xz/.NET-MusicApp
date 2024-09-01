@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using GemBox.Document;
+using GemBox.Spreadsheet;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MusicStore.Domain.Identity;
@@ -170,6 +172,55 @@ namespace MusicStore.Web.Controllers
 
             return View();
         }
+
+
+
+        // Export Playlist Tracks on word document
+        [HttpGet("Playlist/Export/{id}")]
+        public IActionResult Export(Guid id)
+        {
+
+            var playlist = _playlistService.GetPlaylistById(id);
+
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+
+            var workbook = new ExcelFile();
+            var worksheet = workbook.Worksheets.Add("Playlist");
+
+            int row = 1;
+            foreach (var track in playlist.PlaylistTracks)
+            {
+                worksheet.Cells[row, 0].Value = track.Title;
+                worksheet.Cells[row, 1].Value = track.Duration;
+                worksheet.Cells[row, 2].Value = string.Join(", ", track.Artists.Select(a => a.Name));
+                worksheet.Cells[row, 3].Value = track.Album.Title;
+                worksheet.Cells[row, 4].Value = track.YoutubeURL;
+                worksheet.Cells[row, 5].Value = track.ListenCount;
+                worksheet.Cells[row, 6].Value = track.DateAdded;
+                row++;
+            }
+
+            worksheet.Columns[0].AutoFit();
+            worksheet.Columns[1].AutoFit();
+            worksheet.Columns[2].AutoFit();
+            worksheet.Columns[3].AutoFit();
+            worksheet.Columns[4].AutoFit();
+            worksheet.Columns[5].AutoFit();
+            worksheet.Columns[6].AutoFit();
+
+            using (var stream = new MemoryStream())
+            {
+                workbook.Save(stream, GemBox.Spreadsheet.SaveOptions.XlsxDefault);
+
+                return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Playlist.xlsx");
+            }
+        }
+
+
+
+
+
 
 
 

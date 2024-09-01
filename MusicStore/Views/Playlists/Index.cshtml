@@ -7,25 +7,6 @@
 <style>
     
 
-    .checkout-button {
-        margin-top: 30px;
-    }
-
-    .btn-checkout {
-        background-color: #f39c12;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-        .btn-checkout:hover {
-            background-color: #e67e22;
-        }
-
     .play-button {
         padding-right: 10px;
         font-size: 24px;
@@ -88,11 +69,21 @@
                     <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-outline-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                 </div>
                 -->
-                
+
                 <!-- Checkout Button -->
                 <div class="checkout-button">
-                    <button class="btn-checkout" onclick="location.href='@Url.Action("Checkout", "Playlist", new { id = Model.Id })'">Checkout - $@totalPrice.00</button>
+                    <button class="btn btn-outline-primary" onclick="location.href='@Url.Action("Checkout", "Playlist", new { id = Model.Id })'"><i class="fa-brands fa-cc-stripe"></i> Checkout - $@totalPrice.00</button>
                 </div>
+
+
+                <!-- Export Playlist -->
+                <div class="mt-4">
+                    <a href="@Url.Action("Export", "Playlist", new { id = Model.Id })" class="btn btn-outline-primary"><i class="fa-solid fa-file-download"></i> Export Playlist</a>
+                </div>
+
+
+
+
 
             </div>
         </div>
