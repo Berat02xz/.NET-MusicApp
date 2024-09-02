@@ -1,1 +1,106 @@
-[]
+[
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetAlbumById",
+    "RelativePath": "api/API/GetAlbumById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetAllAlbums",
+    "RelativePath": "api/API/GetAllAlbums",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetAllArtists",
+    "RelativePath": "api/API/GetAllArtists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetAllPlaylists",
+    "RelativePath": "api/API/GetAllPlaylists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetAllTracks",
+    "RelativePath": "api/API/GetAllTracks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetArtistById",
+    "RelativePath": "api/API/GetArtistById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetPlaylistById",
+    "RelativePath": "api/API/GetPlaylistById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MusicStore.Web.Controllers.API.API",
+    "Method": "GetTrackById",
+    "RelativePath": "api/API/GetTrackById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

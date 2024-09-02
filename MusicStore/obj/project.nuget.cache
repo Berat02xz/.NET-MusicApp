@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e5PPx1sYBuQ=",
+  "dgSpecHash": "A3+95+WhfZE=",
   "success": true,
   "projectFilePath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\MusicStore.Web.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,8 @@
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\8.0.7\\microsoft.aspnetcore.diagnostics.entityframeworkcore.8.0.7.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\8.0.7\\microsoft.aspnetcore.identity.entityframeworkcore.8.0.7.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.7\\microsoft.aspnetcore.identity.ui.8.0.7.nupkg.sha512",
+    "C:\\Users\\berat\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.8\\microsoft.aspnetcore.jsonpatch.8.0.8.nupkg.sha512",
+    "C:\\Users\\berat\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.8.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.build\\17.8.3\\microsoft.build.17.8.3.nupkg.sha512",
@@ -81,7 +83,7 @@
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.24\\microsoft.codeanalysis.razor.6.0.24.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.8.0\\microsoft.codeanalysis.scripting.common.4.8.0.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.8.0\\microsoft.codeanalysis.workspaces.common.4.8.0.nupkg.sha512",
-    "C:\\Users\\berat\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\berat\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.7\\microsoft.data.sqlite.core.8.0.7.nupkg.sha512",
@@ -132,6 +134,7 @@
     "C:\\Users\\berat\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\mono.texttemplating\\2.3.1\\mono.texttemplating.2.3.1.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\berat\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\nuget.common\\6.9.1\\nuget.common.6.9.1.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\nuget.configuration\\6.9.1\\nuget.configuration.6.9.1.nupkg.sha512",
     "C:\\Users\\berat\\.nuget\\packages\\nuget.dependencyresolver.core\\6.9.1\\nuget.dependencyresolver.core.6.9.1.nupkg.sha512",
