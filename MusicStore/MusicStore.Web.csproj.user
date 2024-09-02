@@ -20,6 +20,7 @@
     <View_SelectedScaffolderCategoryPath>root/Common/MVC/View</View_SelectedScaffolderCategoryPath>
     <Area_SelectedScaffolderID>IdentityScaffolder</Area_SelectedScaffolderID>
     <Area_SelectedScaffolderCategoryPath>root/Identity</Area_SelectedScaffolderCategoryPath>
+    <NameOfLastUsedPublishProfile>C:\Users\berat\OneDrive\Documents\Github\MusicApp\MusicStore\Properties\PublishProfiles\MusicStoreWeb20240902150809 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

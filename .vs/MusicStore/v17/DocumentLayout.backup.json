@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\controllers\\api\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\controllers\\api\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\controllers\\albumscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4FCFB75-D1CE-4BA1-BB48-44977DF626D6}|MusicStore.Repository\\MusicStore.Repository.csproj|solutionrelative:musicstore.repository\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\berat\\onedrive\\documents\\github\\musicapp\\musicstore\\views\\artists\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -178,7 +178,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 312,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,54 +186,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
+              "RelativeDocumentMoniker": "MusicStore\\appsettings.json",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
+              "RelativeToolTip": "MusicStore\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-31T15:17:17.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "MusicStore\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Properties\\launchSettings.json",
+              "RelativeToolTip": "MusicStore\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-02T13:40:18.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AlbumsController.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\AlbumsController.cs",
               "RelativeDocumentMoniker": "MusicStore\\Controllers\\AlbumsController.cs",
               "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\AlbumsController.cs",
               "RelativeToolTip": "MusicStore\\Controllers\\AlbumsController.cs",
-              "ViewState": "AgIAABYBAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywB4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T09:02:23.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "API.cs",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\API\\API.cs",
-              "RelativeDocumentMoniker": "MusicStore\\Controllers\\API\\API.cs",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Controllers\\API\\API.cs",
-              "RelativeToolTip": "MusicStore\\Controllers\\API\\API.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowBIAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T08:44:39.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Program.cs",
               "RelativeDocumentMoniker": "MusicStore\\Program.cs",
               "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\Program.cs",
               "RelativeToolTip": "MusicStore\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-30T14:07:57.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
-              "RelativeDocumentMoniker": "MusicStore\\appsettings.json",
-              "ToolTip": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore\\appsettings.json",
-              "RelativeToolTip": "MusicStore\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-31T15:17:17.142Z",
               "EditorCaption": ""
             },
             {
@@ -246,12 +246,11 @@
               "RelativeToolTip": "MusicStore\\Views\\Artists\\Create.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAIBJwDIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T18:11:21.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T18:11:21.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContextFactory.cs",
               "RelativeDocumentMoniker": "MusicStore.Repository\\ApplicationDbContextFactory.cs",
@@ -259,8 +258,7 @@
               "RelativeToolTip": "MusicStore.Repository\\ApplicationDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T15:18:56.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T15:18:56.642Z"
             },
             {
               "$type": "Document",
@@ -272,8 +270,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Albums\\Edit.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwBsAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T11:40:27.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T11:40:27.211Z"
             },
             {
               "$type": "Document",
@@ -285,8 +282,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Albums\\Index.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAIBJwEQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-30T14:20:17.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:20:17.53Z"
             },
             {
               "$type": "Document",
@@ -298,8 +294,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Artists\\Edit.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAIBJwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-01T19:01:31.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T19:01:31.741Z"
             },
             {
               "$type": "Document",
@@ -311,8 +306,7 @@
               "RelativeToolTip": "MusicStore.Service\\Implementation\\PlaylistService.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAwwC4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:42:39.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:42:39.22Z"
             },
             {
               "$type": "Document",
@@ -324,8 +318,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Albums\\Create.cshtml",
               "ViewState": "AgIAACcAAAAAAAAAAIBJwDgAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T08:23:49.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T08:23:49.095Z"
             },
             {
               "$type": "Document",
@@ -337,12 +330,11 @@
               "RelativeToolTip": "MusicStore\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T15:32:29.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T15:32:29.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MusicStore.Repository\\ApplicationDbContext.cs",
@@ -350,8 +342,7 @@
               "RelativeToolTip": "MusicStore.Repository\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAIBJwBsAAADfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:07:27.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:07:27.958Z"
             },
             {
               "$type": "Document",
@@ -363,8 +354,7 @@
               "RelativeToolTip": "MusicStore\\Controllers\\TracksController.cs",
               "ViewState": "AgIAAO4AAAAAAAAAAAAcwAUBAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T18:40:29.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T18:40:29.717Z"
             },
             {
               "$type": "Document",
@@ -376,8 +366,7 @@
               "RelativeToolTip": "MusicStore.Repository\\Migrations\\20240831153617_MainMigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T15:36:17.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T15:36:17.921Z"
             },
             {
               "$type": "Document",
@@ -389,8 +378,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Playlists\\Index.cshtml",
               "ViewState": "AgIAADUAAAAAAAAAAIBJwFAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T11:13:02.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T11:13:02.824Z"
             },
             {
               "$type": "Document",
@@ -402,8 +390,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Albums\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T08:23:40.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T08:23:40.079Z"
             },
             {
               "$type": "Document",
@@ -415,8 +402,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Artists\\Details.cshtml",
               "ViewState": "AgIAAEcAAAAAAAAAAAAcwFMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-01T12:55:40.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T12:55:40.535Z"
             },
             {
               "$type": "Document",
@@ -428,8 +414,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Playlists\\Checkout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-01T12:23:09.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T12:23:09.724Z"
             },
             {
               "$type": "Document",
@@ -441,8 +426,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Artists\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-01T12:55:35.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T12:55:35.105Z"
             },
             {
               "$type": "Document",
@@ -454,8 +438,7 @@
               "RelativeToolTip": "MusicStore\\Controllers\\PlaylistsController.cs",
               "ViewState": "AgIAAKkAAAAAAAAAAADwv7sAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:36:42.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:36:42.422Z"
             },
             {
               "$type": "Document",
@@ -467,8 +450,7 @@
               "RelativeToolTip": "MusicStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAACBjwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-30T14:47:27.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:47:27.458Z"
             },
             {
               "$type": "Document",
@@ -480,8 +462,7 @@
               "RelativeToolTip": "MusicStore.Domain\\Models\\Track.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-01T12:44:13.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-01T12:44:13.887Z"
             },
             {
               "$type": "Document",
@@ -493,8 +474,7 @@
               "RelativeToolTip": "MusicStore.Service\\Interface\\IPlaylistService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAlwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:37:30.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:37:30.837Z"
             },
             {
               "$type": "Document",
@@ -506,8 +486,7 @@
               "RelativeToolTip": "MusicStore.Service\\Implementation\\TrackService.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAcwGMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T18:45:17.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T18:45:17.19Z"
             },
             {
               "$type": "Document",
@@ -519,8 +498,7 @@
               "RelativeToolTip": "MusicStore.Service\\Interface\\ITrackService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAArwA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T18:44:56.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T18:44:56.46Z"
             },
             {
               "$type": "Document",
@@ -532,8 +510,7 @@
               "RelativeToolTip": "MusicStore.Repository\\Implementation\\PlaylistRepository.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAowDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:44:13.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:44:13.901Z"
             },
             {
               "$type": "Document",
@@ -545,8 +522,7 @@
               "RelativeToolTip": "MusicStore.Repository\\Interface\\IPlaylistRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:43:54.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:43:54.811Z"
             },
             {
               "$type": "Document",
@@ -558,8 +534,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Shared\\_Layout.cshtml.css",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-31T09:15:27.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T09:15:27.428Z"
             },
             {
               "$type": "Document",
@@ -571,8 +546,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T15:46:33.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T15:46:33.777Z"
             },
             {
               "$type": "Document",
@@ -584,8 +558,7 @@
               "RelativeToolTip": "MusicStore\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-25T15:34:56.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T15:34:56.028Z"
             },
             {
               "$type": "Document",
@@ -597,8 +570,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Tracks\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T10:56:44.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T10:56:44.738Z"
             },
             {
               "$type": "Document",
@@ -610,8 +582,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Tracks\\Create.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAACBjwDcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-31T10:56:49.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T10:56:49.688Z"
             },
             {
               "$type": "Document",
@@ -623,8 +594,7 @@
               "RelativeToolTip": "MusicStore\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAkwI8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:47:31.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:47:31.281Z"
             },
             {
               "$type": "Document",
@@ -647,8 +617,7 @@
               "RelativeToolTip": "MusicStore.Domain\\Identity\\MusicStoreUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T13:32:33.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T13:32:33.786Z"
             },
             {
               "$type": "Document",
@@ -660,8 +629,7 @@
               "RelativeToolTip": "MusicStore.Service\\Interface\\IAlbumService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:41:13.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:41:13.427Z"
             },
             {
               "$type": "Document",
@@ -673,8 +641,7 @@
               "RelativeToolTip": "MusicStore.Service\\Interface\\IArtistService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:41:05.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:41:05.954Z"
             },
             {
               "$type": "Document",
@@ -697,8 +664,7 @@
               "RelativeToolTip": "MusicStore\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:36:52.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:36:52.954Z"
             },
             {
               "$type": "Document",
@@ -710,8 +676,7 @@
               "RelativeToolTip": "MusicStore.Domain\\Models\\Playlist.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T13:52:03.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T13:52:03.919Z"
             },
             {
               "$type": "Document",
@@ -723,8 +688,7 @@
               "RelativeToolTip": "MusicStore\\Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-25T16:00:45.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T16:00:45.172Z"
             }
           ]
         }

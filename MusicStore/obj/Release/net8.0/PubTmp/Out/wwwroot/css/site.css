@@ -1,0 +1,108 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar-class {
+    border-color: #3D405B;
+}
+
+.navbar-logo {
+    color: #E07A5F !important;
+    font-weight: 800;
+    padding-left: 24px;
+}
+
+.nav-item-link {
+    font-size: 18px;
+    color: #3D405B;
+}
+
+.navbar-items{
+    padding-left: 32px;
+}
+
+.link-navbar {
+    color: #E07A5F !important;
+}
+
+.outlined-button {
+    margin-left: 16px;
+    margin-right: 24px;
+    color: #E07A5F !important;
+    border: 1px solid #E07A5F;
+    border-radius: 20em;
+    padding: 8px 32px !important;
+}
+
+.heading {
+    font-weight: 300;
+}
+
+.sub-heading {
+    margin-top: 0.5em;
+    padding: 0 10em;
+    font-size: 20px;
+}
+
+.landing-page-heading{
+    margin-top: 3em;
+    margin-bottom: 2em;
+    padding: 0 5em;
+}
+
+.explore-now-button {
+    margin-top: 1em;
+    color: white;
+    padding: 0.7em 5em;
+    background-color: #E07A5F;
+    border: none;
+    border-radius: 20em;
+}
+
+.image-container {
+    background-image: url("../NewFolder/ladning-page-footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: calc(100vh - 90px - 70px); /* Adjust this based on your navbar and heading height */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+}
+
+@media(max-width:1145px) {
+    .image-container {
+        height: 40%;
+    }
+}
+
+@media(max-width:743px) {
+    .sub-heading {
+        margin-top: 2em;
+        padding: 0 1em;
+    }
+}
