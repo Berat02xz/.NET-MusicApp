@@ -6,7 +6,7 @@
         public required string CoverImageUrl { get; set; }
         public required string Description { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public required string Tags { get; set; } // For tagging genres, will be comma seperated in frontend using JS
+        public required string Tags { get; set; } 
         public required AlbumType Type { get; set; } // Enum for album type
 
 
