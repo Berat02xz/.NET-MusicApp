@@ -3,6 +3,7 @@ using MusicStore.Domain.Identity;
 using MusicStore.Repository;
 using MusicStore.Repository.Implementation;
 using MusicStore.Repository.Interface;
+using MusicStore.Service;
 using MusicStore.Service.Implementation;
 using MusicStore.Service.Interface;
 
@@ -31,6 +32,7 @@ builder.Services.AddScoped<ITrackService, TrackService>();
 builder.Services.AddScoped<IArtistService, ArtistService>();
 builder.Services.AddScoped<IAlbumService, AlbumService>();
 builder.Services.AddScoped<IPlaylistService, PlaylistService>();
+builder.Services.AddHttpClient<RestaurantService>(); // Add HttpClient for RestaurantService
 
 builder.Services.AddDefaultIdentity<MusicStoreUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
