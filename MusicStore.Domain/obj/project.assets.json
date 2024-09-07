@@ -3935,19 +3935,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\berat\\.nuget\\packages\\": {}
+    "C:\\Users\\inx_l\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj",
       "projectName": "MusicStore.Domain",
-      "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj",
-      "packagesPath": "C:\\Users\\berat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\obj\\",
+      "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj",
+      "packagesPath": "C:\\Users\\inx_l\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\berat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\inx_l\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
