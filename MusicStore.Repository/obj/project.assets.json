@@ -3966,9 +3966,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj",
       "projectName": "MusicStore.Repository",
-      "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj",
+      "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj",
       "packagesPath": "C:\\Users\\inx_l\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Repository\\obj\\",
       "projectStyle": "PackageReference",
@@ -3988,8 +3988,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj"
+            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj"
             }
           }
         }

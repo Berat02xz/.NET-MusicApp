@@ -17,143 +17,143 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicStore.Web
 build_property.RootNamespace = MusicStore.Web
-build_property.ProjectDir = C:\Users\inx_l\source\repos\MusicAppLocal\MusicStore\
+build_property.ProjectDir = C:\Users\inx_l\Source\Repos\MusicAppLocal\MusicStore\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\inx_l\source\repos\MusicAppLocal\MusicStore
+build_property.MSBuildProjectDirectory = C:\Users\inx_l\Source\Repos\MusicAppLocal\MusicStore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Albums/Create.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Albums/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Albums/Details.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Albums/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Albums/Edit.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Albums/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Albums/Index.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Albums/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Artists/Create.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Artists/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Artists/Delete.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Artists/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Artists/Details.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Artists/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Artists/Edit.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Artists/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Artists/Index.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Artists/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Home/Index.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Home/Privacy.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Partners/Index.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Partners/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Playlists/Checkout.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Playlists/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXENoZWNrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Playlists/Index.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Playlists/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Shared/Error.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Tracks/Create.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Tracks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Tracks/Edit.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Tracks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/_ViewImports.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/_ViewStart.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/inx_l/source/repos/MusicAppLocal/MusicStore/Views/Shared/_Layout.cshtml]
+[C:/Users/inx_l/Source/Repos/MusicAppLocal/MusicStore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0kx3hwkqsc

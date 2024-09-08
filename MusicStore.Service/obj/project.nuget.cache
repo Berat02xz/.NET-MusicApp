@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vZkumIH3ZPU=",
+  "dgSpecHash": "vT5UhLcRkpU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj",
+  "projectFilePath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\inx_l\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\inx_l\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

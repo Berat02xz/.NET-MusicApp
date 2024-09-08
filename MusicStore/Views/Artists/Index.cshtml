@@ -9,40 +9,93 @@
         display: inline-block;
         padding: 5px 10px;
         margin: 2px;
-        border: 1px solid #007bff;
+        border: 1px solid #e07a5f;
         border-radius: 20px;
-        color: #007bff;
+        color: #e07a5f;
         font-size: 0.875rem;
         white-space: nowrap;
     }
 
         .tag:hover {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #e07a5f;
+            color: #ffffff;
         }
+
+    .card-img-top {
+        border-top-left-radius: calc(.25rem - 1px);
+        border-top-right-radius: calc(.25rem - 1px);
+        border-radius: 20em;
+        width: 12em;
+        height: 12em;
+         display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 1em auto; /* Center the image horizontally */
+    }
+
+    
+  
+
+    a {
+        text-decoration: none;
+    }
+
+    .card-title {
+        color: black;
+        font-size: 1.25em;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+    }
+
+    .card-text {
+        margin-bottom: 1em;
+    }
+
+    .container-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5em 10px;
+    }
+
+
+    .button {
+        color: white;
+        padding: 0.7em 2em;
+        background-color: #E07A5F;
+        border: none;
+        border-radius: 20em;
+        font-weight: 300;
+    }
 </style>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 text-center mb-4">
-            <a asp-action="Create" class="btn btn-outline-dark btn-lg">
-                <i class="fas fa-plus"></i> <strong>Add New</strong>
-            </a>
-        </div>
+
+<div class="container" style=" max-width:1500px">
+
+    <div class="container-1">
+        <h1 style="margin-bottom: 0; font-weight: 600; font-size: 2em; color: #E07A5F">Artists</h1>
+        <a asp-action="Create" class="btn button btn-md">
+            <i class="fas fa-plus"></i> <strong>Add New</strong>
+        </a>
     </div>
+  
     <div class="row">
         @foreach (var item in Model)
         {
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <img src="@item.ImageAvatarURL" class="card-img-top" alt="Artist Image" style="max-height: 200px; object-fit: cover;">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-2">
+                <a href="@Url.Action("Details", new { id = item.Id })" class="album-card">
+                    <img src="@item.ImageAvatarURL" class="card-img-top artist-img" alt="Artist Image" style="max-height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-center">@item.Name</h5>
-                        <p class="card-text">
-                            <strong>Country:</strong> @item.Country<br />
-                            <strong>City:</strong> @item.City
-                        </p>
+                        <h5 class="card-title">@item.Name</h5>
                         <div class="mb-2">
-                            <strong>Tags:</strong>
                             <div>
                                 @if (!string.IsNullOrEmpty(@item.Tags))
                                 {
@@ -58,22 +111,8 @@
                                 }
                             </div>
                         </div>
-                        <p class="card-text text-muted mt-2">
-                            @Html.DisplayFor(modelItem => item.Description)
-                        </p>
-                        <div class="mt-auto text-center">
-                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-warning ">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info ">
-                                <i class="fas fa-info-circle"></i>
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger ">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         }
     </div>

@@ -9636,9 +9636,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\MusicStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore\\MusicStore.Web.csproj",
       "projectName": "MusicStore.Web",
-      "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\MusicStore.Web.csproj",
+      "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore\\MusicStore.Web.csproj",
       "packagesPath": "C:\\Users\\inx_l\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\obj\\",
       "projectStyle": "PackageReference",
@@ -9658,14 +9658,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj"
+            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj"
             },
-            "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj"
+            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj"
             },
-            "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj"
+            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj": {
+              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj"
             }
           }
         }
