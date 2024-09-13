@@ -30,17 +30,17 @@ body {
 
 .navbar-logo {
     color: #E07A5F !important;
-    font-weight: 800;
-    padding-left: 24px;
+    font-weight: 800 !important;
+    padding-left: 24px !important;
 }
 
-.nav-item-link {
-    font-size: 18px;
+.nav-link {
+    font-size: 18px !important;
     color: #3D405B;
 }
 
-.navbar-items{
-    padding-left: 32px;
+.navbar-items {
+    padding-left: 32px !important;
 }
 
 .link-navbar {
@@ -48,11 +48,11 @@ body {
 }
 
 .outlined-button {
-    margin-left: 16px;
-    margin-right: 24px;
+    margin-left: 16px !important;
+    margin-right: 24px !important;
     color: #E07A5F !important;
-    border: 1px solid #E07A5F;
-    border-radius: 20em;
+    border: 1px solid #E07A5F !important;
+    border-radius: 20em !important;
     padding: 8px 32px !important;
 }
 
@@ -96,6 +96,84 @@ body {
 .navbar {
     background-color: transparent; 
 }
+
+input {
+    border: #E07A5F;
+}
+
+label {
+    font-weight: 500;
+    color: #b15b45;
+}
+
+.form-control {
+    color: #E07A5F;
+    background-color: #fff;
+    border: 1.5px solid #e07a5f61;
+    resize: none;
+    border-radius: 1rem;
+    height: 3em;
+}
+
+.button {
+    color: white;
+    padding: 0.7em 2em;
+    background-color: #E07A5F;
+    border: none;
+    border-radius: 20em;
+}
+
+.label-class {
+    margin-top: 1em;
+}
+
+.input-class {
+    margin-bottom: 1em;
+}
+
+.btn-secondary {
+    color: #E07A5F;
+    background-color: white;
+    border-color: #E07A5F;
+    width: 10em;
+}
+
+.break-word {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.btn-secondary:hover {
+    color: #ffffff;
+    background-color: #E07A5F;
+    border-color: #E07A5F;
+    width: 10em;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #7d141e;
+    border-color: #7d141e;
+}
+
+.button:hover {
+    background-color: #8b422f;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1px solid #e07a5f;
+    border-radius: 20px;
+    color: #e07a5f;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+    .tag:hover {
+        background-color: #e07a5f;
+        color: #ffffff;
+    }
 
 
 @media (max-width: 576px) {

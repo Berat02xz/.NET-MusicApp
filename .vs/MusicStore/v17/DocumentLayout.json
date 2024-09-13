@@ -1,34 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\",
+  "WorkspaceRootPath": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\views\\artists\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\albums\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\albums\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\artists\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\albums\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\albums\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\artists\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\views\\albums\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\albums\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\views\\artists\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\artists\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\inx_l\\source\\repos\\musicapplocal\\musicstore\\views\\albums\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\artists\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\artists\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\artists\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\albums\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\albums\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|c:\\users\\dranzer\\source\\repos\\musicapplocalproject\\musicstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A2CEA69-ED37-43AE-9556-0BA6703E52E0}|MusicStore\\MusicStore.Web.csproj|solutionrelative:musicstore\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,99 +50,145 @@
       "DocumentGroups": [
         {
           "DockedWidth": 312,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "MusicStore\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "MusicStore\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAuwIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-13T11:02:12.117Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Albums\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Albums\\Edit.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Albums\\Edit.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T21:24:10.106Z",
+              "WhenOpened": "2024-09-13T12:35:54.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Artists\\Index.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Index.cshtml",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Artists\\Index.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Artists\\Index.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAABSAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Albums\\Details.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Details.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Albums\\Details.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Albums\\Details.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T15:50:20.354Z",
+              "WhenOpened": "2024-09-13T12:31:39.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Index.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Index.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Artists\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T12:24:34.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Delete.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Delete.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Artists\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T12:05:57.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Edit.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Artists\\Edit.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T12:00:54.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Create.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Create.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Artists\\Create.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABwAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T11:54:18.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Albums\\Create.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Albums\\Create.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Albums\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T11:53:33.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MusicStore\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T10:59:26.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Artists\\Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Details.cshtml",
               "RelativeDocumentMoniker": "MusicStore\\Views\\Artists\\Details.cshtml",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Artists\\Details.cshtml",
+              "ToolTip": "C:\\Users\\dranzeR\\source\\repos\\MusicAppLocalProject\\MusicStore\\Views\\Artists\\Details.cshtml",
               "RelativeToolTip": "MusicStore\\Views\\Artists\\Details.cshtml",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAuwD8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T15:49:02.668Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Albums\\Create.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Create.cshtml",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Albums\\Create.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Albums\\Create.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T17:07:48.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "MusicStore\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\wwwroot\\css\\site.css*",
-              "RelativeToolTip": "MusicStore\\wwwroot\\css\\site.css*",
-              "ViewState": "AgIAALcAAAAAAAAAAIAwwM4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-07T16:26:32.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T16:26:16.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Albums\\Index.cshtml",
-              "RelativeDocumentMoniker": "MusicStore\\Views\\Albums\\Index.cshtml",
-              "ToolTip": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\Views\\Albums\\Index.cshtml",
-              "RelativeToolTip": "MusicStore\\Views\\Albums\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAnwCUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T16:09:46.96Z",
+              "WhenOpened": "2024-09-13T10:56:33.689Z",
               "EditorCaption": ""
             }
           ]

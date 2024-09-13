@@ -9619,6 +9619,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.7",
       "Microsoft.AspNetCore.Identity.UI >= 8.0.7",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.8",
+      "Microsoft.CodeAnalysis.Analyzers >= 3.3.4",
       "Microsoft.EntityFrameworkCore >= 8.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.7",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.7",
@@ -9631,19 +9632,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\inx_l\\.nuget\\packages\\": {}
+    "C:\\Users\\dranzeR\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore\\MusicStore.Web.csproj",
+      "projectUniqueName": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore\\MusicStore.Web.csproj",
       "projectName": "MusicStore.Web",
-      "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore\\MusicStore.Web.csproj",
-      "packagesPath": "C:\\Users\\inx_l\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\inx_l\\source\\repos\\MusicAppLocal\\MusicStore\\obj\\",
+      "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore\\MusicStore.Web.csproj",
+      "packagesPath": "C:\\Users\\dranzeR\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\inx_l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dranzeR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9658,14 +9659,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Domain\\MusicStore.Domain.csproj"
+            "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Domain\\MusicStore.Domain.csproj"
             },
-            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Repository\\MusicStore.Repository.csproj"
+            "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Repository\\MusicStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Repository\\MusicStore.Repository.csproj"
             },
-            "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj": {
-              "projectPath": "C:\\Users\\inx_l\\Source\\Repos\\MusicAppLocal\\MusicStore.Service\\MusicStore.Service.csproj"
+            "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Service\\MusicStore.Service.csproj": {
+              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Service\\MusicStore.Service.csproj"
             }
           }
         }
@@ -9708,6 +9709,12 @@
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[8.0.8, )"
+          },
+          "Microsoft.CodeAnalysis.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.3.4, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
