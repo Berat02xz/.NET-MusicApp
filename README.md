@@ -34,5 +34,3 @@ When running the app, use these API Endpoints to get access to data from the dat
 | `GET /api/api/GetPlaylistById/{id}`    | Fetches details of a specific playlist by its ID. |
 | `GET /api/api/GetTrackById/{id}`       | Fetches details of a specific track by its ID. |
 
-# Running The Project
-Docker Building in progress
