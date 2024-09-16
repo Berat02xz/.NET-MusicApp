@@ -90,7 +90,7 @@
 
     .album-details, .playlist-container {
         margin-right: 15px;
-        width: 64%;
+        width: 80%;
     }
 
     .album-container {
@@ -99,8 +99,7 @@
     }
 
     .table td, .table th {
-    vertical-align: middle; /* Center content vertically */
-    text-align: center; /* Center content horizontally */
+
 }
 
 .table td {
@@ -126,6 +125,7 @@ dl, ol, ul {
                 </div>
 
                 <div class="col-md-8" style="margin-top:0.5em">
+                <br />
                     <h1 class="mb-3">@album.Title</h1>
                     <p class="text-muted">@album.Type ‧ @album.ReleaseDate.ToShortDateString() ‧ @album.Tracks.Count() songs</p>
 

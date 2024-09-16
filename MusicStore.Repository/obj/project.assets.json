@@ -3961,19 +3961,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dranzeR\\.nuget\\packages\\": {}
+    "C:\\Users\\berat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Repository\\MusicStore.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj",
       "projectName": "MusicStore.Repository",
-      "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Repository\\MusicStore.Repository.csproj",
-      "packagesPath": "C:\\Users\\dranzeR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Repository\\obj\\",
+      "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\MusicStore.Repository.csproj",
+      "packagesPath": "C:\\Users\\berat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dranzeR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\berat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3988,8 +3988,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Domain\\MusicStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\dranzeR\\Source\\Repos\\MusicAppLocalProject\\MusicStore.Domain\\MusicStore.Domain.csproj"
+            "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\berat\\OneDrive\\Documents\\Github\\MusicApp\\MusicStore.Domain\\MusicStore.Domain.csproj"
             }
           }
         }
