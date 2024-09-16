@@ -3,7 +3,7 @@
 # Music App Platform
 This project is a fully-featured music streaming platform built with ASP.NET Core, following the principles of Clean Architecture (Onion Architecture). It allows users to manage artists, albums, and tracks with complete CRUD (Create, Read, Update, Delete) functionality. The platform also provides API endpoints for integration with external systems, including integration with the [Integrated Systems Restaurant App](https://github.com/JordanovaAntoaneta/Integrated-Systems-Restaurant-App).
 
-![Gif](https://github.com/BeratAhmetaj/MusicApp/blob/master/.github/1.gif)
+![Gif](https://github.com/BeratAhmetaj/MusicApp/blob/master/.github/1%20.gif)
 
 ## Features
 - **Artists/Albums/Tracks Management:** 
@@ -18,7 +18,7 @@ This project is a fully-featured music streaming platform built with ASP.NET Cor
   - Export playlists as Excel sheets for easy sharing.
 
 
-![Gif](https://github.com/BeratAhmetaj/MusicApp/blob/master/.github/2.gif)
+![Gif](https://github.com/BeratAhmetaj/MusicApp/blob/master/.github/2%20.gif)
 
 # API Endpoints
 When running the app, use these API Endpoints to get access to data from the database (hosted or local).
