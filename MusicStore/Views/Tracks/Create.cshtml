@@ -19,31 +19,31 @@
     }
 </style>
 
-<h1>@ViewBag.Title</h1>
-<div class="container mt-4">
 
+<div class="container mt-4">
+    <h2 style="color: #b15b45;">Create Track</h2>
 <form asp-action="Create" method="post">
     <!-- Hidden field for AlbumId -->
     <input type="hidden" name="AlbumId" value="@ViewBag.AlbumId" />
 
     <div class="form-group">
-        <label for="Title">Title</label>
-        <input type="text" id="Title" name="Title" value="@Model.Title" class="form-control" required />
+            <label for="Title" class="label-class">Title</label>
+            <input type="text" id="Title" name="Title" value="@Model.Title" class="form-control input-class" required />
     </div>
 
     <div class="form-group">
-        <label for="Duration">Duration</label>
-        <input type="text" id="Duration" name="Duration" value="@Model.Duration" class="form-control" />
+            <label for="Duration" class="label-class">Duration</label>
+            <input type="text" id="Duration" name="Duration" value="@Model.Duration" class="form-control input-class" />
     </div>
 
     <div class="form-group">
-        <label for="YoutubeURL">YouTube URL</label>
-        <input type="text" id="YoutubeURL" name="YoutubeURL" value="@Model.YoutubeURL" class="form-control" />
+            <label for="YoutubeURL" class="label-class">YouTube URL</label>
+            <input type="text" id="YoutubeURL" name="YoutubeURL" value="@Model.YoutubeURL" class="form-control input-class" />
     </div>
 
     <div class="form-group">
-        <label>Select Artists</label>
-        <input type="text" class="form-control track-artist-search" placeholder="Search for artists..." />
+            <label class="label-class">Select Artists</label>
+            <input type="text" class="form-control track-artist-search input-class" placeholder="Search for artists..." />
         <div class="list-group track-artist-list"></div>
         <ul class="list-group selected-track-artists" id="selected-track-artists">
             <!-- Selected track artists will be shown here -->
@@ -51,7 +51,7 @@
         <input type="hidden" name="SelectedArtistIds" id="selected-artist-ids" />
     </div>
 
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="submit" class="btn button btn-primary">Save Changes</button>
 </form>
 </div>
 @section Scripts {

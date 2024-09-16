@@ -246,6 +246,22 @@ label {
     .heading {
         font-size: 2.5em;
     }
+
+    .album-container {
+        flex-direction: column;
+    }
+
+    .album-info {
+        width: 100% !important;
+    }
+    .album-details, .playlist-container {
+        margin-top: 3em !important;
+    }
+
+    .album-details, .playlist-container {
+        margin-right: 15px !important;
+        width: 100% !important;
+    }
 }
 
 @media(max-width:768px) {
