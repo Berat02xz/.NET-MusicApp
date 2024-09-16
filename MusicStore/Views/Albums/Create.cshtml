@@ -21,12 +21,57 @@
     body {
         height: 6000px; /* Ensure the body is tall enough to reach 5000px */
     }
-</style>
-<body>
-    <div class="container mt-4">
-        <h2>Create Album</h2>
 
-        <form asp-action="Create" method="post" class="row g-3">
+    input{
+        border: #E07A5F;
+    }
+
+    label{
+        font-weight:500;
+        color: #b15b45;
+        
+    }
+
+    .form-control {
+        color: #E07A5F;
+        background-color: #fff;
+        border: 1.5px solid #e07a5f61;
+        resize: none;
+        border-radius: 1rem;
+        height: 3em;
+    }
+
+    .button {
+        color: white;
+        padding: 0.7em 2em;
+        background-color: #E07A5F;
+        border: none;
+        border-radius: 20em;
+    }
+
+    .row>* {
+        margin-top: 0;
+    }
+
+    tr{
+        color: #E07A5F;
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png) center/80% no-repeat;
+        color: white;
+    }
+
+    ::placeholder {
+        color: #e07a5f61;
+    }
+</style>
+<body style="padding:1em">
+  
+        <div class=" mt-4" style=" padding:0 2em; border-radius: 1em; ">
+        <h2 style="color: #b15b45;">Create Album</h2>
+
+        <form asp-action="Create" method="post" class="row g-3" style="margin-top: 1em">
             <!-- Left Column: Album Form -->
             <div class="col-md-4">
                 <div class="form-group mb-3">
@@ -43,7 +88,7 @@
 
                 <div class="form-group mb-3">
                     <label asp-for="Description" class="form-label"></label>
-                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <textarea asp-for="Description" class="form-control" style="height: 6em"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
@@ -113,12 +158,11 @@
             </div>
 
             <!-- Submit Button (spanning both columns) -->
-            <div class="col-12 text-center mt-3">
-                <button type="submit" class="btn btn-primary">Create Album</button>
+            <div class="col-12 text-center ">
+                <button type="submit" class="btn button">Create Album</button>
             </div>
         </form>
     </div>
-
 </body>
 
 

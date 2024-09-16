@@ -20,16 +20,33 @@
         .album-card .card-title,
         .album-card .card-text {
             color: inherit; /* Inherit color from parent link */
+            font-size: 1em !important;
         }
+
+    .card-text{
+        color: rgba(0,0,0,63);
+    }
 
     .album-cover {
         transition: transform 0.3s ease, opacity 0.3s ease;
-        width: 100%; /* Ensure the image covers the card width */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+        width: 90%;
+        margin-left:10px;
+        margin-top:10px;
     }
 
     .album-card:hover .album-cover {
         opacity: 0.9;
         transform: scale(1.05);
+    
+    }
+
+    .album-card {
+       border: none;
+        display: block; /* Ensure the image behaves like a block-level element */
+        margin-left: auto;
+        margin-right: auto;
+     
     }
 
 
@@ -46,6 +63,44 @@
     .play-button:hover {
            color: #f39c12; /* Change color on hover if desired */
      }
+
+    .card-body{
+        padding:0;
+    }
+
+    h6 {
+        text-align: start;
+        color: rgba(1, 1, 1, 0.65);
+        padding-left: 10px;
+    }
+
+    .card-text {
+        text-align: start;
+        padding-left: 10px;
+    }
+
+    .card-title {
+        text-align: start;
+        margin-top: 0.6em;
+        padding-left: 10px;
+    }
+
+    .button {
+        color: white;
+        padding: 0.7em 2em;
+        background-color: #E07A5F;
+        border: none;
+        border-radius: 20em;
+        font-weight:300;
+    }
+
+    .container-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.5em 10px;
+    }
+
 </style>
 
 <!-- Display Model Errors -->
@@ -62,24 +117,25 @@
 }
 
 
-<div class="container">
-
-    <p class="text-center">
-        <a asp-action="Create" class="btn btn-outline-dark btn-lg">
+<div class="container" style="max-width:1500px">
+    <div class="container-1">
+        <h1 style="margin-bottom: 0; font-weight: 600; font-size: 2em;  color: #E07A5F">Collection</h1>
+        <a asp-action="Create" class="btn button btn-md">
             <i class="fas fa-plus"></i> <strong>Add Album</strong>
         </a>
-    </p>
+    </div>
+
 
     <div class="row">
         @foreach (var album in Model)
         {
-            <div class="col-md-4 mb-4">
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-2">
                 <!-- Wrap the entire card in a link -->
-                <a href="@Url.Action("Details", new { id = album.Id })" class="card album-card">
+                <a href="@Url.Action("Details", new { id = album.Id })" class=" album-card">
                     <img src="@album.CoverImageUrl" class="card-img-top album-cover" alt="Cover Image" />
                     <div class="card-body">
                         <h2 class="card-title">@album.Title</h2>
-                        <p class="card-text">
+                        <p class="card-text ">
                             @if (album.Artists != null && album.Artists.Any())
                             {
                                     @foreach (var artist in album.Artists)
@@ -93,9 +149,7 @@
                             <p>No artists</p>
                             }
                         </p>
-                        <p class="card-text">
-                            @album.Type
-                        </p>
+                  
                     </div>
                 </a>
             </div>

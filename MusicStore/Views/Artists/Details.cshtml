@@ -15,8 +15,8 @@
     <style>
         .artist-image {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 20em;
+            height: 20em;
             object-fit: cover;
             margin-bottom: 20px;
         }
@@ -25,9 +25,10 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 2em;
         }
         .artist-details h4 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
         .artist-description {
@@ -43,26 +44,25 @@
             background-color: #0056b3;
             color: #fff;
         }
-        .tag {
-            display: inline-block;
-            padding: 5px 10px;
-            margin: 5px;
-            border: 1px solid #007bff;
-            border-radius: 20px;
-            color: #007bff;
-            font-size: 0.875rem;
-            white-space: nowrap;
-        }
-        .tag:hover {
-            background-color: #007bff;
-            color: #fff;
+     
+        .btn-secondary {
+            color: #E07A5F;
+            background-color: white;
+            border-color: #E07A5F;
+            width: 10em;
+         }
+
+        .btn-secondary:hover {
+            color: #ffffff;
+            background-color: #E07A5F;
+            border-color: #E07A5F;
+            width: 10em;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Artist Details</h1>
-
+        <h1 style="margin-bottom: 0; font-weight: 600; font-size: 2em; color: #E07A5F">Artist Details</h1>
         <div class="row artist-details">
             <div class="col-md-4 text-center">
                 <img src="@Model.ImageAvatarURL" alt="Artist Image" class="artist-image img-fluid" />

@@ -6,52 +6,56 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-<style>
+    <style>
     .play-button {
-        padding-right:10px;
+        padding-right: 10px;
         font-size: 24px;
-        color: #000000; /* Adjust color as needed */
+        color: #000000;
         cursor: pointer;
         transition: transform 0.3s, color 0.3s;
     }
 
     .play-button:hover {
-            transform: scale(1.2);
-            color: #0056b3; /* Adjust color on hover as needed */
+        transform: scale(1.2);
+        color: #0056b3;
     }
 
-    .fa-play, fa-heart  {
+    .fa-play, .fa-heart {
         font-size: 24px;
-        color: #000000; /* Adjust color as needed */
+        color: #000000;
         cursor: pointer;
         transition: transform 0.3s, color 0.3s;
     }
 
-    .fa-play:hover, fa-heart:hover {
-            transform: scale(1.2);
-            color: #0056b3; /* Adjust color on hover as needed */
+    .fa-play:hover, .fa-heart:hover {
+        transform: scale(1.2);
+        color: #0056b3;
     }
 
     .custom-table td, .custom-table th {
-        padding: 2.5rem; /* Adjust padding as needed */
+        padding: 2.5rem;
+    }
+
+    .custom-table thead th {
+        background-color: #E07A5F; /* Header background color */
+        color: #ffffff; /* Header text color */
+        font-weight: bold;
     }
 
     .custom-table tbody tr:hover {
-        background-color: #f8f9fa; /* Optional: hover effect */
+        background-color: #f8f9fa;
     }
 
     .album-cover {
-        width: 300px; /* Adjust the width as needed */
+        width: 50em;
         height: auto;
     }
 
     .artist-card {
         border: 1px solid #dee2e6;
         border-radius: 10px;
-
         background-color: #ffffff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
     }
 
     .artist-image {
@@ -62,159 +66,172 @@
         margin-bottom: 5px;
     }
 
-    .tag {
-        display: inline-block;
-        padding: 5px 10px;
-        border: 1px solid #007bff;
-        border-radius: 20px;
-        font-size: 10px;
-        color: #007bff;
-        white-space: nowrap;
-    }
-
-        .tag:hover {
-            background-color: #007bff;
-            color: #fff;
-        }
-
+   
     .btn-custom {
         background-color: #007bff;
         color: #fff;
         border-radius: 5px;
     }
 
-        .btn-custom:hover {
-            background-color: #0056b3;
-            color: #fff;
-        }
+    .btn-custom:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+    .album-info {
+        display: flex;
+        flex-direction: column;
+        width: 36%;
+    }
+
+    .playlist {
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .album-details, .playlist-container {
+        margin-right: 15px;
+        width: 80%;
+    }
+
+    .album-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .table td, .table th {
+
+}
+
+.table td {
+    padding: 1rem; /* Adjust as needed */
+}
+dl, ol, ul {
+    margin-top: 1em;
+    margin-bottom: 1rem;
+}
+    
+
 </style>
 
 
 <div class="container mt-4">
-    <div class="row">
-        <!-- Album Cover Image -->
-        <div class="col-md-4 text-center">
-            <img src="@album.CoverImageUrl" alt="Cover Image" class="img-fluid rounded album-cover" />
+    <div class="album-container">
+        <!-- Album Information -->
+        <div class="album-info">
+   
+                <!-- Album Cover Image -->
+                <div class="col-md-8 text-center">
+                    <img src="@album.CoverImageUrl" alt="Cover Image" class="img-fluid rounded album-cover" />
+                </div>
+
+                <div class="col-md-8" style="margin-top:0.5em">
+                <br />
+                    <h1 class="mb-3">@album.Title</h1>
+                    <p class="text-muted">@album.Type ‧ @album.ReleaseDate.ToShortDateString() ‧ @album.Tracks.Count() songs</p>
+
+                    <!-- Artist Information Album -->
+                    @foreach (var artist in album.Artists)
+                    {
+                        <a class="text-muted" href="/Artists/Details/@artist.Id" style="text-decoration:none;">
+                            <img src="@artist.ImageAvatarURL" alt="Artist Image" class="artist-image img-fluid" /> @artist.Name
+                        </a>
+                        <br />
+                    }
+
+                    <br />
+
+                    <!-- Album Tags -->
+                    @if (!string.IsNullOrEmpty(album.Tags))
+                    {
+                        var tags = album.Tags.Split(';');
+                        foreach (var tag in tags)
+                        {
+                            <span class="tag">@tag.Trim()</span>
+                        }
+                    }
+                    else
+                    {
+                        <span class="text-muted">No genres available</span>
+                    }
+
+                    <!-- Add, Edit and Delete Actions -->
+                    <div class="mt-4">
+                        <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></a>
+                        <a href="@Url.Action("Edit", new { id = album.Id })" class="btn btn-outline-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <form asp-action="Delete" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@album.Id" />
+                            <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
+      
         </div>
 
-        <!-- Album Information -->
-        <div class="col-md-8">
-            <h1 class="mb-3">@album.Title</h1>
-            <p class="text-muted">@album.Type ‧ @album.ReleaseDate.ToShortDateString() ‧ @album.Tracks.Count() songs </p>
-
-            <!-- Artist Information Album -->
-
-                @foreach (var artist in album.Artists)
-                {
-                    <a class="text-muted" href="/Artists/Details/@artist.Id" style="text-decoration:none;">  <img src="@artist.ImageAvatarURL" alt="Artist Image" class="artist-image img-fluid" />  @artist.Name</a>
-                    <br />
-                }
-
-                <br />
-            <!-- Album Tags -->
-                @if (!string.IsNullOrEmpty(album.Tags))
-                {
-                    var tags = album.Tags.Split(';');
-                    foreach (var tag in tags)
-                    {
-                        <span class="tag">@tag.Trim()</span>
-                    }
-                }
-                else
-                {
-                    <span class="text-muted">No genres available</span>
-                }
-
-
-            <!-- Add, Edit and Delete Actions -->
-            <div class="mt-4">
-                <a asp-action="Create" asp-controller="Tracks" asp-route-albumId="@album.Id" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></a>
-                <a href="@Url.Action("Edit", new { id = album.Id })" class="btn btn-outline-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                <form asp-action="Delete" method="post" class="d-inline">
-                    <input type="hidden" name="id" value="@album.Id" />
-                    <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
-                </form>
-            </div>
+        <!-- Playlist Container -->
+        <div class="playlist-container">
+     
+            @if (tracks.Any())
+            {
+                <table class="table table-hover">
+                   
+                    <tbody>
+                        @foreach (var track in tracks)
+                        {
+                            <tr>
+                                <td>
+                                    <!-- Play Button Symbol using Font Awesome -->
+                                    <i class="fa-solid fa-play play-button"
+                                       data-id="@track.Id"
+                                       data-url="@Url.Action("Play", "Tracks")"
+                                       onclick="playTrack($(this).data('id'), $(this).data('url'))">
+                                    </i>
+                                    <a href="@track.YoutubeURL" target="_top" style="text-decoration:none;">
+                                        @track.Title
+                                    </a>
+                                </td>
+                                <td>@track.ListenCount <i class="fa-solid fa-headphones"></i></td>
+                                <td>@track.Duration <i class="fa-regular fa-clock"></i></td>
+                                <td>
+                                    @if (track.Artists != null && track.Artists.Any())
+                                    {
+                                        @foreach (var artist in track.Artists)
+                                        {
+                                            <a href="/Artists/Details/@artist.Id" style="text-decoration:none;">@artist.Name</a>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <ul>No artists</ul>
+                                    }
+                                </td>
+                                <td>
+                                    <!-- Add To Playlist -->
+                                    <a href="#" class="add-to-playlist" data-track-id="@track.Id">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <!-- Edit Button -->
+                                    <a href="@Url.Action("Edit", "Tracks", new { id = track.Id })" class="btn btn-outline-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <!-- Delete Button -->
+                                    <a href="#"
+                                       class="btn btn-outline-danger btn-sm delete-track"
+                                       data-id="@track.Id"
+                                       title="Delete Track">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No tracks available.</p>
+            }
         </div>
     </div>
-
-
-
-<div>
-    <hr />
-    @if (tracks.Any())
-    {
-            <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th> <!-- Add an Actions column -->
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var track in tracks)
-                {
-                    <tr>
-                        <td>
-                            
-                            <!-- Play Button Symbol using Font Awesome -->
-                            <i class="fa-solid fa-play play-button"
-                               data-id="@track.Id"
-                               data-url="@Url.Action("Play", "Tracks")"
-                               onclick="playTrack($(this).data('id'), $(this).data('url'))">
-                                </i> <a href="@track.YoutubeURL" target="_top" style="text-decoration:none;">
-                                    @track.Title
-                            </a>
-                            </td>
-                            <td>@track.ListenCount <i class="fa-solid fa-headphones"></i></td>
-                            <td>@track.Duration   <i class="fa-regular fa-clock"></i></td>
-                       
-                        <td>
-                            @if (track.Artists != null && track.Artists.Any())
-                            {
-                                
-                                    @foreach (var artist in track.Artists)
-                                    {
-                                        <a href="/Artists/Details/@artist.Id" style="text-decoration:none;">@artist.Name</a>
-                                    }
-                                
-                            }
-                            else
-                            {
-                                <ul>No artists</ul>
-                            }
-                        </td>
-                        <td>
-                            <!-- Add To Playlist -->
-                            <a href="#" class="add-to-playlist" data-track-id="@track.Id">
-                                    <i class="fa-regular fa-heart"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <!-- Edit Button -->
-                                <a href="@Url.Action("Edit", "Tracks", new { id = track.Id })" class="btn btn-outline-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <!-- Delete Button -->
-                                <a href="#"
-                                   class="btn btn-outline-danger btn-sm delete-track"
-                                   data-id="@track.Id"
-                                   title="Delete Track">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <p>No tracks available.</p>
-    }
-</div>
 
     <!-- Back to List Button -->
     <div class="mt-4">
@@ -224,20 +241,13 @@
     </div>
 </div>
 
-</div>
-</div>
-
-
 @section Scripts {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function playTrack(trackId, playUrl) {
-            // Send an AJAX request to increment the listen count
             $.post(playUrl, { id: trackId }, function (response) {
                 console.log('Track listened:', trackId);
-                // Optionally, update the UI to reflect the incremented listen count
                 location.reload();
-
             }).fail(function () {
                 alert('Error occurred while playing the track.');
             });
@@ -245,44 +255,21 @@
     </script>
     <script>
         $(document).on('click', '.add-to-playlist', function () {
-            var button = $(this); // Reference to the clicked button
-            var trackId = button.data('track-id'); // Retrieve the track ID from the data attribute
+            var button = $(this);
+            var trackId = button.data('track-id');
 
             $.ajax({
-                url: '@Url.Action("AddTrackToPlaylist", "Playlists")', // URL to send the AJAX request to (specify the controller name)
-                type: 'POST', // HTTP method
+                url: '@Url.Action("AddTrackToPlaylist", "Playlists")',
+                type: 'POST',
                 data: {
-                    trackId: trackId // Send the track ID
+                    trackId: trackId
                 },
                 success: function (result) {
-                    // Handle successful response
                     alert('Track added to playlist!');
                 },
                 error: function (xhr, status, error) {
-                    // Handle errors
                     alert('An error occurred: ' + xhr.responseText);
                 }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.delete-track').click(function (event) {
-                event.preventDefault(); // Prevent the default anchor action
-
-                var trackId = $(this).data('id'); // Get the track ID from data attribute
-
-                $.ajax({
-                    url: '/Tracks/Delete', // Adjust the URL if necessary
-                    type: 'POST',
-                    data: { id: trackId },
-                    success: function (response) {
-                        location.reload(); // Refresh the page after successful deletion
-                    },
-                    error: function () {
-                        alert('Error deleting track.'); // Optional: notify user if there's an error
-                    }
-                });
             });
         });
     </script>

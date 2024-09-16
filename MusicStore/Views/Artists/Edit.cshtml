@@ -7,48 +7,43 @@
 
 
 <div class="container">
-<h1>Edit</h1>
-
-<h4>Artist</h4>
-<hr />
-
-
+<h2 style="color: #b15b45;">Edit Artist</h2>
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <label asp-for="Name" class="control-label label-class"></label>
+                <input asp-for="Name" class="form-control input-class" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageAvatarURL" class="control-label"></label>
-                <input asp-for="ImageAvatarURL" class="form-control" />
+                <label asp-for="ImageAvatarURL" class="control-label label-class"></label>
+                <input asp-for="ImageAvatarURL" class="form-control input-class" />
                 <span asp-validation-for="ImageAvatarURL" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <label asp-for="Description" class="control-label label-class"></label>
+                <input asp-for="Description" class="form-control input-class" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Country" class="control-label"></label>
-                <input asp-for="Country" class="form-control" />
+                <label asp-for="Country" class="control-label label-class"></label>
+                <input asp-for="Country" class="form-control input-class" />
                 <span asp-validation-for="Country" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="City" class="control-label"></label>
-                <input asp-for="City" class="form-control" />
+                <label asp-for="City" class="control-label label-class"></label>
+                <input asp-for="City" class="form-control input-class" />
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
-            <label asp-for="Tags" class="control-label">Tags (separated by semicolons)</label>
-                <input asp-for="Tags" class="form-control" />
+            <label asp-for="Tags" class="control-label label-class">Tags (separated by semicolons)</label>
+                <input asp-for="Tags" class="form-control input-class" />
                 <span asp-validation-for="Tags" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="Id" />
             <br />
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn button btn-primary" />
             </div>
         </form>
 
