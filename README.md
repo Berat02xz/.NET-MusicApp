@@ -1,6 +1,6 @@
 ![fcse_logo](https://github.com/BeratAhmetaj/Museudonia/blob/main/Gif%20Animations/Logo_FINKI_UKIM_EN/Logo_FINKI_UKIM_EN_00000.png)
 
-# Music App Platform
+## Music App Platform
 This project is a fully-featured music streaming platform built with ASP.NET Core, following the principles of Clean Architecture (Onion Architecture). It allows users to manage artists, albums, and tracks with complete CRUD (Create, Read, Update, Delete) functionality. The platform also provides API endpoints for integration with external systems, including integration with the [Integrated Systems Restaurant App](https://github.com/JordanovaAntoaneta/Integrated-Systems-Restaurant-App).
 
 ![Gif](https://github.com/BeratAhmetaj/MusicApp/blob/master/.github/1%20.gif)
